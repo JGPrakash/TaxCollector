@@ -921,8 +921,8 @@ $(document).ready(function () {
    
            */
         $.server.webMethodGET = function (methodName, callback, error) {
-            //var mainurl = "http://" + window.instanceURL +"/"+window.instanceShopOnRestApi+ "/api/v1/";
-            var mainurl = "http://localhost:8084/TaxCollectorRestAPI/api/v1/";
+            var mainurl = "http://" + window.instanceURL +"/"+window.instanceShopOnRestApi+ "/api/v1/";
+            //var mainurl = "http://localhost:8084/TaxCollectorRestAPI/api/v1/";
             //var mainurl = "http://13.233.235.20:8080/MyShop/api/v1/";
             
             var headers = { "auth-token": getCookie("auth_token") }
@@ -974,8 +974,8 @@ $(document).ready(function () {
         }
 
         $.server.webMethodPOST = function (methodName, inputData, callback, error) {
-            //var mainurl = "http://" + window.instanceURL + "/" + window.instanceShopOnRestApi + "/api/v1/";
-            var mainurl = "http://localhost:8084/TaxCollectorRestAPI/api/v1/";
+            var mainurl = "http://" + window.instanceURL + "/" + window.instanceShopOnRestApi + "/api/v1/";
+            //var mainurl = "http://localhost:8084/TaxCollectorRestAPI/api/v1/";
             var headers = {
                 "auth-token": getCookie("auth_token"),
                 
@@ -1076,8 +1076,8 @@ $(document).ready(function () {
 
         }
         $.server.webMethodPUT = function (methodName, inputData, callback, errorCallback) {
-            //var mainurl = "http://" + window.instanceURL + "/" + window.instanceShopOnRestApi + "/api/v1/";
-            var mainurl = "http://localhost:8084/TaxCollectorRestAPI/api/v1/";
+            var mainurl = "http://" + window.instanceURL + "/" + window.instanceShopOnRestApi + "/api/v1/";
+            //var mainurl = "http://localhost:8084/TaxCollectorRestAPI/api/v1/";
             var headers = { "auth-token": localStorage.getItem("auth_token") }
             headers.comp_id = localStorage.getItem("user_company_id");
             
@@ -1130,8 +1130,8 @@ $(document).ready(function () {
         }
 
         $.server.webMethodDELETE = function (methodName, inputData, callback, error, context) {
-            //var mainurl = "http://" + window.instanceURL + "/" + window.instanceShopOnRestApi + "/api/v1/";
-            var mainurl = "http://localhost:8084/TaxCollectorRestAPI/api/v1/";
+            var mainurl = "http://" + window.instanceURL + "/" + window.instanceShopOnRestApi + "/api/v1/";
+            //var mainurl = "http://localhost:8084/TaxCollectorRestAPI/api/v1/";
             var headers = { "auth-token": localStorage.getItem("auth_token") }
             headers.comp_id = localStorage.getItem("user_company_id");
             
