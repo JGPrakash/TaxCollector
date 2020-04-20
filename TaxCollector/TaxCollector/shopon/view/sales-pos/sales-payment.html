@@ -1,0 +1,104 @@
+﻿<div control="salesPayment.messagePanel" controlid="msgPanel" class="message-panel" style="display:none">
+
+</div>
+<div controlId="pnlPayPending" id="pnlPayPending" control="salesPayment.htmlControl">
+    <div class="col-xs-12 payment-label">
+        <span class="header-label">Payment Screen</span>
+        <!--<input style="float:right;" value="Back" rlabel="Back" controlId="btnPayPendingBack" control="salesPayment.secondaryButton" event="click:btnPayPendingBack_click" />-->
+    </div>
+    <div class="col-xs-12 col-lg-12 " style="margin-top:10px;">
+        <div class="col-xs-12 col-lg-4 payment-label">
+            <span class="label  col-xs-12 col-lg-6" rlabel="Bill Details"><b>Bill Details:</b></span>
+            <select class="col-xs-12 col-lg-6" control="salesPayment.dropDownList" controlid="ddlBillView" style="width:150px">
+                <option>Bill View</option>
+                <option>Payment View</option>
+            </select>
+        </div>
+        <div class="col-xs-12 col-lg-4 payment-label">
+            <span class="label  col-xs-12 col-lg-12">&nbsp;</span>
+        </div>
+        <div class="col-xs-12 col-lg-4 payment-label" style="float:right;" controlId="pnlPendingPayButton" control="salesPayment.htmlControl">
+            <input style="float:right;" value="Pay" tabindex="3" rlabel="Pay" controlId="btnPayPending" control="salesPayment.primaryReadButton" event="click:btnPayPending_click" />
+            <span style="float:right;" id="pendingPrint"><input type="checkbox" tabindex="7" controlId="chkPrintBill" control="salesPayment.chkBox" name="print_bill"><span class="label" style="margin-top:-22px;margin-left:5px;" rlabel="Print">Print</span></span>
+        </div>
+    </div>
+    <div class="col-xs-12 col-lg-12 payment-label" style="margin-top:10px;">
+        <div class="col-xs-12 col-lg-4 ">
+            <span class="label  col-xs-12 col-lg-6" rlabel="Customer">Customer</span>
+            <select style="margin-left:0px;" class="col-sm-6" control="salesPayment.dropDownList" controlid="ddlCustName"></select>
+        </div>
+        <div class="col-xs-12 col-lg-4 payment-label">
+            <span class="label  col-xs-12 col-lg-6" style="margin-left:0px;" rlabel="Bill Type">Bill Type</span>
+            <select style="margin-left:0px;" class="col-sm-6" control="salesPayment.dropDownList" controlid="ddlPayBillType">
+                <option>Select</option>
+                <option>Sale</option>
+                <option>SaleReturn</option>
+            </select>
+        </div>
+        <div class="col-xs-12 col-lg-4 payment-label" default-button="btnSearchBill">
+            <input class="col-xs-12 col-lg-9" tabindex="1" placeholder="Enter Bill No or Scan" type="text" controlId="txtSearchBillNo" control="salesPayment.textBox" id="txtSearchBillNo">
+            <input style="float:right;" value="Search" rlabel="Search" controlId="btnSearchBill" control="salesPayment.secondaryButton" event="click:btnSearchBill_click" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-lg-12 " style="margin-top:10px;">
+        <div class="col-xs-12 col-lg-4 payment-label">
+            <span class="label  col-xs-12 col-lg-6" rlabel="Pay Mode">Pay Mode</span>
+            <select class="col-sm-6" control="salesPayment.dropDownList" controlid="ddlPayMode">
+                <option>Cash</option>
+                <option>Card</option>
+            </select>
+        </div>
+        <div class="col-xs-12 col-lg-4 payment-label" controlId="pnlCardType" control="salesPayment.htmlControl">
+            <span class="label  col-xs-12 col-lg-6" rlabel="Card Type">Card Type</span>
+            <select class="col-lg-6" control="salesPayment.dropDownList" controlid="ddlCardType">
+                <option>Credit</option>
+                <option>Debit</option>
+            </select>
+        </div>
+        <div class="col-xs-12 col-lg-4 payment-label" controlId="pnlCardNo" control="salesPayment.htmlControl">
+            <span class="label  col-xs-12 col-lg-6" rlabel="Card No">Card No <span style="color:red;">*</span></span>
+            <input class="col-xs-12 col-lg-6" type="text" controlId="txtCardNo" control="salesPayment.textBox" placeholder="Card No">
+        </div>
+        <div class="col-xs-12 col-lg-4 payment-label" controlId="pnlCouponNo" control="salesPayment.htmlControl">
+            <span class="label  col-xs-12 col-lg-6" rlabel="Coupon No">Coupon No <span style="color:red;">*</span></span>
+            <input class="col-xs-12 col-lg-6" type="text" controlId="txtCouponNo" control="salesPayment.textBox" placeholder="Coupon No ">
+        </div>
+        <div class="col-xs-12 col-lg-4 payment-label" style="display:none;">
+            <span class="label  col-xs-12 col-lg-6" rlabel="Description">Description</span>
+            <input class="col-xs-12 col-lg-6" type="text" controlId="txtPendingPayDesc" control="salesPayment.textBox">
+        </div>
+        <div class="col-xs-12 col-lg-4 payment-label">
+            <span class="label  col-xs-12 col-lg-6" rlabel="Discount">Discount</span>
+            <input class="col-xs-12 col-lg-6" tabindex="1" id="txtPendingPaymentDiscount" controlId="txtPendingPaymentDiscount" control="salesPayment.textBox">
+        </div>
+        <div class="col-xs-12 col-lg-4 payment-label">
+            <span class="label  col-xs-12 col-lg-6" rlabel="Date">Date</span>
+            <input class="col-xs-12 col-lg-6" controlId="dsPendingPayDate" control="salesPayment.dateSelector" />
+        </div>
+    </div>
+    <div class="col-xs-12 col-lg-12 payment-label" style="margin-top:10px;">
+        <div class="col-xs-12 col-lg-4 payment-label" controlId="pnlPendingPaidAmount" control="salesPayment.htmlControl">
+            <span class="label  col-xs-12 col-lg-6" style="font-size:24px;"><b>Total Amount</b></span>
+            <span class="label-value col-xs-12 col-lg-6" controlId="lblTotalAmount" control="salesPayment.labelValue" style="font-size:30px;font-weight:bold;background:transparent;border:none;"></span>
+            <span controlId="lblTotalPendingAmount" control="salesPayment.labelValue" style="display:none;"></span>
+        </div>
+        <div class="col-xs-12 col-lg-4 payment-label" controlId="pnlPendingReceivedAmount" control="salesPayment.htmlControl">
+            <span class="label  col-xs-12 col-lg-6" style="font-size:24px;"><b>Received Amount</b></span>
+            <input class="col-xs-12 col-lg-6" tabindex="2" type="text" controlId="txtReceivedAmount" control="salesPayment.textBox" placeholder="Received Amount" style="font-size:30px;font-weight:bold;background:transparent;border:none;">
+        </div>
+        <div class="col-xs-4 payment-label">
+            <span class="label col-xs-6" style="font-size:24px;"><b>Balance</b></span>
+            <span class="label-value col-xs-6" controlId="lblPaymentBalance" control="salesPayment.labelValue" style="font-size:30px;font-weight:bold;background:transparent;border:none;">00.00</span>
+        </div>
+    </div>
+    <div class="col-xs-12 col-lg-12 payment-label" style="margin-top:0px;">
+        <div class="col-xs-12 col-lg-12 payment-label"> <hr /> </div>
+        <div style="width:100%; overflow-x:auto; overflow-y:hidden;margin-top:10px">
+            <div controlId="grdPendingPayment" control="salesPayment.grid">
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-lg-12 " style="height:50px;">
+        <span>&nbsp;</span>
+    </div>
+</div>

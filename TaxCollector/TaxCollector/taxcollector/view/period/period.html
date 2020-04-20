@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+
+    <script src="/config/config.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+
+        document.write('<script src="/'+ appConfig.root + '/core/master.js" type="text/javascript" > <\/script> ');
+        document.write('<link href="/' + appConfig.root + '/taxcollector/view/period/period.css" rel="stylesheet" />');
+        document.write('<script src="/' + appConfig.root + '/taxcollector/view/period/period.js"><\/script>');
+        document.write('<script src="/' + appConfig.root + '/taxcollector/service/period-service-api.js"><\/script>');
+
+        //Tamil Font
+        document.write('<script src="/' + appConfig.root + '/core/tamil-common.js" type="text/javascript" > <\/script> ');
+        document.write('<script src="/' + appConfig.root + '/core/tamil.js" type="text/javascript" > <\/script> ');
+
+    </script>
+
+</head>
+
+
+<body control="page.periodPage" controlId="periodPage">
+
+
+
+    <div control="periodPage.masterPage" controlId="masterPage"></div>
+    <div style="margin-top:-20px">
+
+        <!--Load Content Area-->
+        <div class="container-fluid">
+
+
+            <div class="content-area row">
+                <div control="periodPage.messagePanel" controlid="msgPanel" class="message-panel" style="display:none">
+                </div>
+                <div class="search-panel col-sm-4" default-button="btnSearch">
+
+                    <div class="search-action">
+                        <hr>
+                        <input type="button" value="Search" rlabel="Search" control="periodPage.primaryReadButton" controlId="btnSearch" event="click:btnSearch_click" />
+
+                    </div>
+
+                    <div class="search-filter">
+                        <div>
+
+                            <input type="text" control="periodPage.textBox" controlId="txtSearchInput" rlabel="Enter period id or name" placeholder="Enter period id or name">
+                        </div>
+
+
+
+                    </div>
+                    <div class="search-result">
+                        <div control="periodPage.grid" controlId="grdSearchResult"> </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <span class="label" rlabel="F1 - New"> F1 - New </span>
+                        <span class="label" rlabel="F2 - Save"> F2 - Save </span>
+                        <span class="label" rlabel="Ctrl + R - Remove"> Ctrl + R - Remove </span>
+                    </div>
+                </div>
+                <div class="detail-panel  col-sm-8">
+
+                    <div class="detail-action">
+                        <input type="button" value="New" rlabel="New" control="periodPage.primaryReadButton" controlId="btnNew" event="click:btnNew_click" />
+
+                        <input type="button" value="Save" rlabel="Save" control="periodPage.primaryReadButton" controlId="btnSave" event="click:btnSave_click" />
+
+                        <input type="button" value="Remove" rlabel="Remove" control="periodPage.secondaryButton" controlId="btnDelete" event="click:btnDelete_click" />
+
+                    </div>
+
+                    <div class="detail-info container-fluid">
+                        <div class="detail-basic row">
+                            <span class="label col-sm-12" rlabel="Period Details"><b>Period Details:</b></span>
+                            <div class="col-sm-6">
+                                <span class="label col-sm-4" rlabel="Name*">Name</span>
+                                <input class="col-sm-8" type="text" control="periodPage.textBox" controlId="txtName" rlabel="Name" placeholder="Name">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br />
+
+
+</body>
+</html>

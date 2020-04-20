@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+
+    <script src="/config/config.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+
+        document.write('<script src="/'+ appConfig.root + '/core/master.js" type="text/javascript" > <\/script> ');
+        document.write('<link href="/' + appConfig.root + '/taxcollector/view/staff/staff.css" rel="stylesheet" />');
+        document.write('<script src="/' + appConfig.root + '/taxcollector/view/staff/staff.js"><\/script>');
+        document.write('<script src="/' + appConfig.root + '/taxcollector/service/staff-service-api.js"><\/script>');
+
+        //Tamil Font
+        document.write('<script src="/' + appConfig.root + '/core/tamil-common.js" type="text/javascript" > <\/script> ');
+        document.write('<script src="/' + appConfig.root + '/core/tamil.js" type="text/javascript" > <\/script> ');
+
+    </script>
+
+</head>
+
+
+<body control="page.staffPage" controlId="staffPage">
+
+
+
+    <div control="staffPage.masterPage" controlId="masterPage"></div>
+    <div style="margin-top:-20px">
+
+        <!--Load Content Area-->
+        <div class="container-fluid">
+
+
+            <div class="content-area row">
+                <div control="staffPage.messagePanel" controlid="msgPanel" class="message-panel" style="display:none">
+                </div>
+                <div class="search-panel col-sm-4" default-button="btnSearch">
+
+                    <div class="search-action">
+                        <hr>
+                        <input type="button" value="Search" rlabel="Search" control="staffPage.primaryReadButton" controlId="btnSearch" event="click:btnSearch_click" />
+
+                    </div>
+
+                    <div class="search-filter">
+                        <div>
+
+                            <input type="text" control="staffPage.textBox" controlId="txtSearchInput" rlabel="Enter staff id or name" placeholder="Enter staff id or name">
+                        </div>
+
+
+
+                    </div>
+                    <div class="search-result">
+                        <div control="staffPage.grid" controlId="grdSearchResult"> </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <span class="label" rlabel="F1 - New"> F1 - New </span>
+                        <span class="label" rlabel="F2 - Save"> F2 - Save </span>
+                        <span class="label" rlabel="Ctrl + R - Remove"> Ctrl + R - Remove </span>
+                    </div>
+                </div>
+                <div class="detail-panel  col-sm-8">
+
+                    <div class="detail-action">
+                        <input type="button" value="New" rlabel="New" control="staffPage.primaryReadButton" controlId="btnNew" event="click:btnNew_click" />
+
+                        <input type="button" value="Save" rlabel="Save" control="staffPage.primaryReadButton" controlId="btnSave" event="click:btnSave_click" />
+
+                        <input type="button" value="Remove" rlabel="Remove" control="staffPage.secondaryButton" controlId="btnDelete" event="click:btnDelete_click" />
+
+                    </div>
+
+                    <div class="detail-info container-fluid">
+                        <div class="detail-basic row">
+                            <span class="label col-sm-12" rlabel="Personal Details"><b>Personal Details:</b></span>
+                            <div class="col-sm-6">
+                                <span class="label col-sm-4" rlabel="Name*">Name</span>
+                                <input class="col-sm-8" type="text" control="staffPage.textBox" controlId="txtName" rlabel="Name" placeholder="Name">
+                            </div>
+                            <div class="col-sm-6">
+                                <span class="label col-sm-4" rlabel="Mobile No*">Mobile No</span>
+                                <input class="col-sm-8" type="text"  control="staffPage.textBox" controlId="txtMobileNo" rlabel="Mobile No" placeholder="Mobile No">
+                            </div>
+                            <div class="col-sm-6">
+                                <span class="label col-sm-4" rlabel="Aadhaar No*">Aadhaar No</span>
+                                <input class="col-sm-8" type="text" control="staffPage.textBox" controlId="txtAadharNo" rlabel="Aadhaar No" placeholder="Aadhar No">
+                            </div>
+                            <div class="col-sm-6">
+                                <span class="label col-sm-4" rlabel="Address">Address</span>
+                                <textarea class="col-sm-8" rows="4" type="text" control="staffPage.textBox" controlId="txtAddress" rlabel="Address" placeholder="Address"></textarea>
+                            </div>
+                            <div class="col-sm-6">
+                                <span class="label col-sm-4" rlabel="Alternate Mobile No">Alternate Mobile No</span>
+                                <input class="col-sm-8" type="text" maxlength="10" control="staffPage.textBox" controlId="txtAlterMobileNo" rlabel="Alternate Mobile No" placeholder="Alternate Mobile No">
+                            </div>
+                            <div class="col-sm-6">
+                                <span class="label col-sm-4" rlabel="Email">Email</span>
+                                <input class="col-sm-8" english-font type="text" control="staffPage.textBox" controlId="txtEmail" rlabel="Email" placeholder="Email">
+                            </div>
+                            <span class="label col-sm-12" rlabel="Bank Details"><b>Bank Details:</b></span>
+                            <div class="col-sm-6">
+                                <span class="label col-sm-4" rlabel="Bank Name">Bank Name</span>
+                                <input class="col-sm-8" english-font type="text" control="staffPage.textBox" controlId="txtBankName" rlabel="Bank Name" placeholder="Bank Name">
+                            </div>
+                            <div class="col-sm-6">
+                                <span class="label col-sm-4" rlabel="Account No">Account No</span>
+                                <input class="col-sm-8" type="text" control="staffPage.textBox" controlId="txtAccountNo" rlabel="Account No" placeholder="Account No">
+                            </div>
+                            <div class="col-sm-6">
+                                <span class="label col-sm-4" rlabel="PAN No">Pan No</span>
+                                <input class="col-sm-8" type="text" english-font control="staffPage.textBox" controlId="txtPanNo" rlabel="PAN No" placeholder="Pan No">
+                            </div>
+                            <span class="col-xs-12">&nbsp;</span>
+                            <div class="image-panel col-xs-12 col-lg-6 col-sm-12 col-md-6" align="center" controlId="pnlImg" control="staffPage.htmlControl">
+                                <span class="label col-sm-4" rlabel="Photo">Photo</span>
+                                <div class="col-lg-8">
+                                    <img id="output" style="max-width:150px; max-height:150px;" />
+                                    <div class="col-md-12" style="padding:0px;">
+                                        <div>
+                                            <label for="fileUpload" class="label" rlabel="Select File to Upload:">
+                                                Select File to Upload:
+                                            </label>
+
+                                            <input type="file" id="fileUpload" accept="image/*" onchange="loadFile(event)">
+                                            <br />
+                                            <input id="btnUploadFile" class="btn btn-sm btn-success" control="staffPage.primaryReadButton" type="button" value="Upload Photo" rlabel="Upload Photo" controlid="btnUploadImage" event="click:btnUploadImage_click" />
+
+                                        </div>
+                                        <script>
+                                            var loadFile = function (event) {
+                                                var output = document.getElementById('output');
+                                                output.src = URL.createObjectURL(event.target.files[0]);
+                                            };
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br />
+
+
+</body>
+</html>

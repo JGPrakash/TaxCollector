@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sub_sales_bill_land" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="822" leftMargin="0" rightMargin="20" topMargin="0" bottomMargin="0" uuid="323bf048-2361-4484-a42e-353f9f1d842c">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Sales-bill"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<queryString language="json">
+		<![CDATA[root.BillItem]]>
+	</queryString>
+	<field name="BillItemNo" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="BillItemNo"/>
+		<fieldDescription><![CDATA[BillItemNo]]></fieldDescription>
+	</field>
+	<field name="ProductName" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="ProductName"/>
+		<fieldDescription><![CDATA[ProductName]]></fieldDescription>
+	</field>
+	<field name="Pack" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Pack"/>
+		<fieldDescription><![CDATA[Pack]]></fieldDescription>
+	</field>
+	<field name="Batch" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Batch"/>
+		<fieldDescription><![CDATA[Batch]]></fieldDescription>
+	</field>
+	<field name="Hsn" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Hsn"/>
+		<fieldDescription><![CDATA[Hsn]]></fieldDescription>
+	</field>
+	<field name="Exp" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Exp"/>
+		<fieldDescription><![CDATA[Exp]]></fieldDescription>
+	</field>
+	<field name="Qty" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Qty"/>
+		<fieldDescription><![CDATA[Qty]]></fieldDescription>
+	</field>
+	<field name="Qty_unit" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Qty_unit"/>
+		<fieldDescription><![CDATA[Qty_unit]]></fieldDescription>
+	</field>
+	<field name="FreeQty" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="FreeQty"/>
+		<fieldDescription><![CDATA[FreeQty]]></fieldDescription>
+	</field>
+	<field name="Rate" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Rate"/>
+		<fieldDescription><![CDATA[Rate]]></fieldDescription>
+	</field>
+	<field name="PDis" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="PDis"/>
+		<fieldDescription><![CDATA[PDis]]></fieldDescription>
+	</field>
+	<field name="MRP" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="MRP"/>
+		<fieldDescription><![CDATA[MRP]]></fieldDescription>
+	</field>
+	<field name="Per" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Per"/>
+		<fieldDescription><![CDATA[Per]]></fieldDescription>
+	</field>
+	<field name="CGST" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="CGST"/>
+		<fieldDescription><![CDATA[CGST]]></fieldDescription>
+	</field>
+	<field name="GST" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="GST"/>
+		<fieldDescription><![CDATA[GST]]></fieldDescription>
+	</field>
+	<field name="TaxRate" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="TaxRate"/>
+		<fieldDescription><![CDATA[TaxRate]]></fieldDescription>
+	</field>
+	<field name="SGST" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="SGST"/>
+		<fieldDescription><![CDATA[SGST]]></fieldDescription>
+	</field>
+	<field name="GValue" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="GValue"/>
+		<fieldDescription><![CDATA[GValue]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="15" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="24" height="15" forecolor="#000000" backcolor="#74B86E" uuid="5b4bab24-3888-46c9-b998-5e6b01b6ff04">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[S.No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="24" y="0" width="246" height="15" forecolor="#000000" backcolor="#74B86E" uuid="b3a72b9c-c0c9-48cc-8538-260e6133b4ab">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Product Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="270" y="0" width="95" height="14" forecolor="#000000" backcolor="#74B86E" uuid="b317bb2b-7451-4248-bf76-b45472ec3f8e">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HSN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="428" y="0" width="66" height="15" forecolor="#000000" backcolor="#74B86E" uuid="49d88e1d-dcb5-43f6-9cb6-d85f04927b5d"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="494" y="0" width="58" height="15" forecolor="#000000" backcolor="#74B86E" uuid="c9b6439f-532f-49ef-9d0e-9ccf5754c73f">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Per]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="552" y="0" width="66" height="15" forecolor="#000000" backcolor="#74B86E" uuid="e74323c9-0607-408e-926f-5c2740a16a06">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CGST]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="365" y="0" width="63" height="15" forecolor="#000000" backcolor="#74B86E" uuid="552873db-bb4a-4ad8-8cb3-268fdd99cda8"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Qty]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="618" y="0" width="66" height="15" forecolor="#000000" backcolor="#74B86E" uuid="0e80519a-102b-43b6-ac34-b109755b3a51"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SGST]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="684" y="0" width="121" height="15" forecolor="#000000" backcolor="#74B86E" uuid="95640a46-03a4-4e91-b255-e97214f450bd">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[G Value]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField>
+				<reportElement x="365" y="0" width="63" height="15" isPrintWhenDetailOverflows="true" uuid="f40d257a-adc0-4cf6-893f-09d80da6f68d">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Qty}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="428" y="0" width="66" height="15" isPrintWhenDetailOverflows="true" uuid="ef0e3288-f2ce-4e55-b4f8-f8e831405e36"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Rate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="494" y="0" width="58" height="15" isPrintWhenDetailOverflows="true" uuid="878502a9-f2aa-47f1-be12-8900fd6323f4"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Per}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="552" y="0" width="66" height="15" isPrintWhenDetailOverflows="true" uuid="6e172ff2-7ac2-45a6-8fc3-0286558aa72e"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CGST}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="618" y="0" width="66" height="15" isPrintWhenDetailOverflows="true" uuid="9395798a-faa5-462f-b2c2-bede9c5b0e4b"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SGST}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="684" y="0" width="121" height="15" isPrintWhenDetailOverflows="true" uuid="99f3bbac-1519-4bf0-bfe8-093e8e20b66b"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{GValue}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="0" width="95" height="15" isPrintWhenDetailOverflows="true" uuid="368622c6-570d-4670-9c5d-0db1b81e1448"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Hsn}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="24" y="0" width="246" height="15" isPrintWhenDetailOverflows="true" uuid="f1265e99-7e9e-43bf-9ec2-28ce9f966e96">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ProductName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="24" height="15" isPrintWhenDetailOverflows="true" uuid="17fd494f-0bcd-4799-92e5-037a8fa28cc5">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BillItemNo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</summary>
+</jasperReport>

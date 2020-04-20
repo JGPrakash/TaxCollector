@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Customer" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4d38e754-1e91-4768-923f-ee3d0bf1a6f7">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Customer"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<queryString language="json">
+		<![CDATA[root]]>
+	</queryString>
+	<field name="ApplicaName" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="ApplicaName"/>
+		<fieldDescription><![CDATA[ApplicaName]]></fieldDescription>
+	</field>
+	<field name="ApplsName" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="ApplsName"/>
+		<fieldDescription><![CDATA[ApplsName]]></fieldDescription>
+	</field>
+	<field name="CompanyAddress" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="CompanyAddress"/>
+		<fieldDescription><![CDATA[CompanyAddress]]></fieldDescription>
+	</field>
+	<field name="PhoneNo" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="PhoneNo"/>
+		<fieldDescription><![CDATA[PhoneNo]]></fieldDescription>
+	</field>
+	<field name="CompanyDLNo" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="CompanyDLNo"/>
+		<fieldDescription><![CDATA[CompanyDLNo]]></fieldDescription>
+	</field>
+	<field name="CompanyTINNo" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="CompanyTINNo"/>
+		<fieldDescription><![CDATA[CompanyTINNo]]></fieldDescription>
+	</field>
+	<field name="CompanyGST" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="CompanyGST"/>
+		<fieldDescription><![CDATA[CompanyGST]]></fieldDescription>
+	</field>
+	<field name="BillName" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="BillName"/>
+		<fieldDescription><![CDATA[BillName]]></fieldDescription>
+	</field>
+	<field name="Customer" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Customer"/>
+		<fieldDescription><![CDATA[Customer]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="171" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="0" y="0" width="60" height="30" uuid="68ec7dcf-1007-450a-9d8b-d4d1cd4a8b6a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="0" width="370" height="70" uuid="e51337a2-17af-40ff-91ad-f097785e40fe"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="26" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ApplsName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="70" width="370" height="30" uuid="fde13d01-bced-4cd5-9a2c-1f8f6e771a24"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CompanyAddress}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="100" width="30" height="20" uuid="71dc7af9-f34d-48c8-a9d4-1459d9853692"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Ph:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="210" y="100" width="140" height="20" uuid="f5abe085-52a5-4745-a33a-512015e9d384"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PhoneNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="13" y="127" width="100" height="16" uuid="60c957a0-50f2-4152-820b-0ee4eef307bd">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[DL.No : 
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="61" y="127" width="210" height="16" uuid="3218f094-bf55-4cbf-918a-2133e83b26df"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CompanyDLNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="360" y="129" width="44" height="16" uuid="99075d04-ccf3-419a-bf0e-f0b82ad5a98c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[TIN :
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="413" y="129" width="152" height="18" uuid="1ef18002-fe0a-46ca-a1a9-50a1cd18437c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CompanyTINNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="360" y="151" width="44" height="16" uuid="7309f586-401a-4fe0-a2aa-1bd4d07b53f9"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[GST :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="413" y="150" width="153" height="18" uuid="12e0de0a-24f3-4779-af2c-95bc93db10dd"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CompanyGST}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="81" splitType="Stretch">
+			<subreport>
+				<reportElement key="" isPrintRepeatedValues="false" x="1" y="40" width="552" height="31" uuid="3e9f7784-d64d-4dcf-887a-087aa24a29d1"/>
+        <dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("Customer")]]></dataSourceExpression>
+        <subreportExpression><![CDATA[$P{SUBREPORT_DIR}+"cust.jasper"]]></subreportExpression>
+			</subreport>
+			<textField>
+				<reportElement x="200" y="10" width="130" height="23" uuid="d5f363db-2e69-418e-963e-1d84231977c5"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BillName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="20" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement x="393" y="0" width="20" height="18" uuid="90d53ed2-78ad-4b3a-b0e3-5aabc44e6a80">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[For ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="415" y="0" width="129" height="18" uuid="7202f0f3-d168-47cf-a08a-488a61a9a399"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ApplicaName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</summary>
+</jasperReport>

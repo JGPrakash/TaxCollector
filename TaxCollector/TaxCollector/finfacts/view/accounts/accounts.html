@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+
+        <script src="/config/config.js" type="text/javascript"></script>
+        <script type="text/javascript">
+
+
+        document.write('<script src="/'+ appConfig.root + '/core/master.js" type="text/javascript" > <\/script> ');
+        document.write('<script src="/' + appConfig.root + '/login/service/user/user-service.js"><\/script>');
+
+        document.write('<link href="/' + appConfig.root + '/finfacts/view/accounts/accounts.css" rel="stylesheet" />');
+        document.write('<script src="/' + appConfig.root + '/finfacts/view/accounts/accounts.js"><\/script>');
+
+        document.write('<script src="/' + appConfig.root + '/finfacts/service/accaccount-service.js"><\/script>');
+        document.write('<script src="/' + appConfig.root + '/finfacts/service/revenue-service.js"><\/script>');
+        document.write('<script src="/' + appConfig.root + '/finfacts/service/user/company-service.js"><\/script>');
+        </script>
+    </head>
+<body control="page.accaccountPage" controlId="accaccountPage">
+    <div control="accaccountPage.masterPage" controlId="masterPage"></div>
+    <div control="accaccountPage.messagePanel" controlid="msgPanel" class="message-panel" style="display:none;margin-top:40px"></div>
+    <div style="margin-top:80px">
+        <!--Load Content Area-->
+        <div class="container-fluid">
+            <div class="content-area row">
+                <div class="company-panel col-sm-12" style="margin: 10px;">
+                    <span><b>Company Name</b></span>
+                    <select controlId="ddlCompanyName" control="accaccountPage.dropDownList" style="width:150px;" autofocus></select>
+                </div>
+                <div class="search-panel  col-sm-4" control="accaccountPage.htmlControl" controlid="pnlSearch">
+
+                    <div class="search-action">
+                        <hr>
+                        <input type="button" value="Search" control="accaccountPage.primaryReadButton" controlid="btnSearch" event="click:btnSearch_click" />
+                    </div>
+                    <div class="search-filter">
+                        <input type="text" control="accaccountPage.textBox" controlid="txtSearch" placeholder="Search With Account Id" />
+                    </div>
+                    <div class="search-result" style="height:500px;">
+                        <div control="accaccountPage.grid" controlid="grdAccaccountResult"></div>
+                    </div>
+                    <div class="col-sm-12" style="height:60px;">
+                        <span class="label"> F1 - New </span>
+                        <span class="label"> F2 - Save </span>
+                        <span class="label"> Ctrl + R - Remove </span>
+                    </div>
+                </div>
+                <div class="detail-panel  col-sm-8" control="accaccountPage.htmlControl" controlid="pnlDetailPanel">
+
+                    <div class="detail-action">
+                        <input type="button" value="New" control="accaccountPage.primaryWriteButton" controlid="btnNew" event="click:btnNew_click" />
+
+                        <input type="button" value="Save" control="accaccountPage.primaryWriteButton" controlid="btnSave" event="click:btnSave_click" />
+                        <input type="button" value="Remove" control="accaccountPage.primaryWriteButton" controlid="btnDelete" event="click:btnDelete_click" />
+                    </div>
+                    <br /><br /><br />
+                    <!--<div control="accaccountPage.messagePanel" controlid="msgPanel" class="message-panel" style="display:none"></div>-->
+                    <div class="detail-info container-fluid" control="accaccountPage.htmlControl" controlid="pnlDetail">
+                        <div class="detail-basic row">
+                            <div class="col-xs-12 col-sm-6 col-lg-6 col-md-6">
+                                <span class="label col-xs-12 col-sm-6 col-lg-4 col-md-4"> Account Name</span>
+                                <input class="col-xs-12 col-sm-6 col-lg-6 col-md-6" type="text" control="accaccountPage.textBox" controlId="txtAccountName">
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-lg-6 col-md-6">
+                                <span class="label col-xs-12 col-sm-6 col-lg-4 col-md-4">Account No</span>
+                                <input class="col-xs-12 col-sm-6 col-lg-6 col-md-6" type="text" control="accaccountPage.textBox" controlId="txtAccountNo" placeholder="Enter Account No">
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-lg-6 col-md-6">
+                                <span class="label col-xs-12 col-sm-6 col-lg-4 col-md-4">Group</span>
+                                <select class="col-xs-12 col-sm-6 col-lg-6 col-md-6" control="accaccountPage.dropDownList" controlid="ddlGroups"></select>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-lg-6 col-md-6">
+                                <span class="label col-xs-12 col-sm-6 col-lg-4 col-md-4">Balance</span>
+                                <span class="col-xs-12 col-sm-6 col-lg-6 col-md-6" control="accaccountPage.label" controlid="lblBalance"></span>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                    <div class="transaction-panel container-fluid" control="accaccountPage.htmlControl" controlid="pnlDetailTrans">
+                        <div class="detail-basic detail-basic-horiz row col-xs-12 col-md-12 col-lg-12 col-sm-12">
+                            <span class="label col-xs-12 col-sm-6 col-lg-4 col-md-4" style="font-size:20px; font-weight:bold;">My Transactions</span>
+                        </div>
+                        <div class="detail-basic detail-basic-horiz row">
+                            <div class="col-xs-12 col-md-6 col-lg-6 col-sm-12">
+                                <span class="label col-xs-12 col-sm-6 col-lg-4 col-md-4">Start Date</span>
+                                <input class="col-xs-12 col-sm-6 col-lg-6 col-md-6" type="text" control="accaccountPage.dateSelector" controlId="dsSearchFromDate">
+                            </div>
+                            <div class="col-xs-12 col-md-6 col-lg-6 col-sm-12">
+                                <span class="label col-xs-12 col-sm-6 col-lg-4 col-md-4">End Date</span>
+                                <input class="col-xs-12 col-sm-6 col-lg-6 col-md-6" type="text" control="accaccountPage.dateSelector" controlId="dsSearchToDate">
+                            </div>
+
+                        </div>
+                        <div class="detail-basic detail-basic-horiz row">
+                            <div class="col-xs-12 col-md-6 col-lg-6 col-sm-12">
+                                <span class="label col-xs-12 col-sm-6 col-lg-4 col-md-4">Description</span>
+                                <input class="col-xs-12 col-sm-6 col-lg-6 col-md-6" type="text" control="accaccountPage.textBox" controlId="txtSearchDescription">
+                            </div>
+                            <div class="col-xs-12 col-md-6 col-lg-6 col-sm-12">
+                                <input type="button" value="Search" control="accaccountPage.primaryReadButton" controlid="btnSearchTransaction" event="click:btnSearchTransaction_click" />
+                            </div>
+                        </div>
+                        <div control="accaccountPage.grid" controlid="grdTransactions"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+         
+</body>
+</html>

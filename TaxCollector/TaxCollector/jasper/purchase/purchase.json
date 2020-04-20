@@ -1,0 +1,163 @@
+{"root": {
+      "viewMode": "Standard",	
+      "SDate": "20-01-2017",
+      "EDate": "20-06-2017",
+      "Supplier": "All",
+      "BillType": "All",
+      "Item": "All",
+	  "Status": "All",
+      "TotalSales":"10830487.27",
+	  "TotalPayment":"4585595.29",
+	  "TotalReturn":"1346219.75",
+	  "TotalReturnPayment":"298240.00",
+	  "NetSales":"9484267.52",
+	  "ApplicaName":"Shopon Dev Region",
+	  "ApplsName":"SHOPON DEV REGION",
+      "CompanyAddress": "NO.102G/32/4 POLPETTAI TUTICORIN DIST TUTICORIN-628002",
+      "PhoneNo": "+919345345434",
+      "CompanyDLNo": "TNT/161/20B-TNT/149/21B",
+      "CompanyTINNo": "33586450443",
+      "CompanyGST": "33APOPR2352F1ZV",
+"Standard": [
+	{
+	  "BillNo": "16",
+      "BillType": "Purchase",	
+      "BillDate": "19-07-2017",
+      "SupplierNo": "5",	
+      "SupplierName": "Agarwals",
+      "Amount": "94860.00",
+      "Paid": "0.00",
+      "Balance": "94860.00"
+    },
+    {
+	  "BillNo": "58",
+      "BillType": "Return",	
+      "BillDate": "20-07-2017",	
+      "SupplierNo": "1",	
+      "SupplierName": "Test Supplier",
+      "Amount": "903.00",
+      "Paid": "0.00",
+      "Balance": "903.00"
+    },
+	{
+	  "BillNo": "128",
+      "BillType": "Purchase",	
+      "BillDate": "26-07-2017",	
+      "SupplierNo": "1",	
+      "SupplierName": "Test Supplier",
+      "Amount": "6048.00",
+      "Paid": "0.00",
+      "Balance": "6048.00"
+    }
+  ],
+  "Summary": [
+    {
+	  "Date": "15-07-2017",
+      "TotalSale":"197533.20",
+      "TotalPayment":"163628.40",
+	  "TotalReturn":"75000.00",
+	  "TotalReturnPayment":"75000.00"
+    },
+	{
+	  "Date": "17-07-2017",
+      "TotalSale":"693870.00",
+      "TotalPayment":"693870.00",
+	  "TotalReturn":"98880.00",
+	  "TotalReturnPayment":"98880.00"
+    },
+    {
+	  "Date": "18-07-2017",
+      "TotalSale":"7900.00",
+      "TotalPayment":"7900.00",
+	  "TotalReturn":"0.00",
+	  "TotalReturnPayment":"0.00"
+    }
+  ],
+  "SupplierWise": [
+	{
+	  "SupplierNo": "1",
+      "SupplierName": "Test Supplier",	
+      "TotalAmount": "1072647.35",	
+      "TotalPaid": "333983.60"
+    },
+    {
+	  "SupplierNo": "2",
+      "SupplierName": "Test Supplier 2",	
+      "TotalAmount": "472878.40",	
+      "TotalPaid": "472878.40"
+    },
+	{
+	  "SupplierNo": "3",
+      "SupplierName": "Elcliff Formulations PVT LTD",	
+      "TotalAmount": "1970017.83",	
+      "TotalPaid": "253067.49"
+    }
+  ],
+  "POWise": [
+    {
+	  "PONo": "1",
+      "BillNo": "1",	
+      "InvoiceNo": "123",	
+      "SupplierNo": "1",
+      "SupplierName": "Test Supplier",
+      "OrderedDate": "15-07-2017",
+      "Status": "Completed",
+      "NoItems": "1",
+      "TotalCost": "50000.00",
+      "TotalPaid": "76000.00"
+    },
+	{
+	  "PONo": "12",
+      "BillNo": "14",	
+      "InvoiceNo": "111",	
+      "SupplierNo": "5",
+      "SupplierName": "Agarwals",
+      "OrderedDate": "17-07-2017",
+      "Status": "Confirmed",
+      "NoItems": "3",
+      "TotalCost": "7300.00",
+      "TotalPaid": "7900.00"
+    },
+    {
+	  "PONo": "36",
+      "BillNo": "90",	
+      "InvoiceNo": "794765416",	
+      "SupplierNo": "10",
+      "SupplierName": "Test1",
+      "OrderedDate": "24-07-2017",
+      "Status": "Confirmed",
+      "NoItems": "1",
+      "TotalCost": "600000.00",
+      "TotalPaid": "600000.00"
+    }
+  ],
+  "ItemWise": [
+    {
+	  "ItemNo": "1",
+      "ItemName": "AZIFF",	
+      "Unit": "Gram",	
+      "Quantity": "1000.00",	
+      "Cost": "10.00",
+      "Amount": "9997.99",
+      "TotalPaid": "9997.99"
+    },
+	{
+	  "ItemNo": "121",
+      "ItemName": "Good day",	
+      "Unit": "Pieces",	
+      "Quantity": "2000.00",	
+      "Cost": "50.00",
+      "Amount": "94860.00",
+      "TotalPaid": "0.00"
+    },
+    {
+	  "ItemNo": "12",
+      "ItemName": "BIOTIFF SACHET",	
+      "Unit": "No Unit",	
+      "Quantity": "200.00",	
+      "Cost": "4.00",
+      "Amount": "816.00",
+      "TotalPaid": "0.00"
+    }
+  ]
+  }}

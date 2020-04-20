@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="main-b2c-report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="df013db5-f76e-44d3-b0df-bcbc46d93160">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="B2C Report"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true"/>
+	<style name="SubTitle" forecolor="#736343" fontName="DejaVu Sans Mono" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="DejaVu Sans Mono" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="DejaVu Sans Mono" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#D9F5B0"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="logo" class="java.lang.Object"/>
+	<queryString language="json">
+		<![CDATA[root]]>
+	</queryString>
+	<field name="CompName" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="CompName"/>
+		<fieldDescription><![CDATA[CompName]]></fieldDescription>
+	</field>
+	<field name="ReportName" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="ReportName"/>
+		<fieldDescription><![CDATA[ReportName]]></fieldDescription>
+	</field>
+	<field name="CompanyAddress" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="CompanyAddress"/>
+		<fieldDescription><![CDATA[CompanyAddress]]></fieldDescription>
+	</field>
+	<field name="No of Invoices" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="No of Invoices"/>
+		<fieldDescription><![CDATA[No of Invoices]]></fieldDescription>
+	</field>
+	<field name="Total Invoice Value" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Total Invoice Value"/>
+		<fieldDescription><![CDATA[Total Invoice Value]]></fieldDescription>
+	</field>
+	<field name="Total Taxable Value" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Total Taxable Value"/>
+		<fieldDescription><![CDATA[Total Taxable Value]]></fieldDescription>
+	</field>
+	<field name="Total Cess" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Total Cess"/>
+		<fieldDescription><![CDATA[Total Cess]]></fieldDescription>
+	</field>
+	<field name="Details" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Details"/>
+		<fieldDescription><![CDATA[Details]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="125" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="106" height="100" uuid="1c003177-754c-448f-8ce1-16868856f545">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="Title" x="107" y="0" width="341" height="40" uuid="b5e85fef-485d-4027-ad61-f26989d30cad">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="26"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CompName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="SubTitle" x="103" y="90" width="341" height="22" forecolor="#000000" uuid="bc039f2f-240d-4334-b019-d58afedc2e8b">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ReportName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="107" y="41" width="341" height="16" uuid="854bb57b-7d51-4e92-b8d1-ad9cc7d299a7">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CompanyAddress}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="72" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement mode="Opaque" x="28" y="0" width="112" height="25" forecolor="#FFFFFF" backcolor="#4B43BF" uuid="40caada9-0b07-4121-b10d-2ada9d7845ba">
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Summary For B2C(4)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="155" y="28" width="65" height="25" forecolor="#FFFFFF" backcolor="#4B43BF" uuid="b351e96f-f296-46a4-af99-dbe219641a17"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Inv Value]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="28" width="90" height="25" forecolor="#FFFFFF" backcolor="#4B43BF" uuid="68be7b79-8040-4b51-955f-ee2ed25e856a"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. of Recipients]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="90" y="28" width="65" height="25" forecolor="#FFFFFF" backcolor="#4B43BF" uuid="d31a7fc7-6677-4f1e-aaca-fb3b9532c0a4"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="300" y="28" width="55" height="25" forecolor="#FFFFFF" backcolor="#4B43BF" uuid="27fb0308-c5fd-4bbe-a635-25e610d3a8b6"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="464" y="28" width="92" height="25" forecolor="#FFFFFF" backcolor="#4B43BF" uuid="d898156f-026c-4614-adad-0857790b5d1f"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="220" y="28" width="80" height="25" forecolor="#FFFFFF" backcolor="#4B43BF" uuid="e01147bd-5b97-456a-92a8-d46174d64bff"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="410" y="28" width="54" height="25" forecolor="#FFFFFF" backcolor="#4B43BF" uuid="3e21d54d-5de1-4937-9c1c-e4a486364565"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Cess]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="355" y="28" width="55" height="25" forecolor="#FFFFFF" backcolor="#4B43BF" uuid="9899d081-849c-4dc8-84dd-a1e8b45eabc2"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Taxable Value]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="300" y="53" width="55" height="15" isPrintWhenDetailOverflows="true" uuid="a06caac2-51db-491b-b100-98d4e519a6f3"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="53" width="54" height="15" isPrintWhenDetailOverflows="true" uuid="c7bbd672-96e6-4541-aa33-bf8baf1aef9f"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Total Cess}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="155" y="53" width="65" height="15" isPrintWhenDetailOverflows="true" uuid="8e67addb-f0b4-41a7-ac17-59de4eb897ff"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Total Invoice Value}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="464" y="53" width="92" height="15" isPrintWhenDetailOverflows="true" uuid="c4641cf3-69db-4aff-9967-c9a11eed7c4a"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="355" y="53" width="55" height="15" isPrintWhenDetailOverflows="true" uuid="fb4aa26d-cd1d-4176-ad36-ec6869861a7e"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Total Taxable Value}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="53" width="90" height="15" isPrintWhenDetailOverflows="true" uuid="92b0a7f5-1171-475f-8649-5949ebb3affb"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{No of Invoices}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="53" width="80" height="15" isPrintWhenDetailOverflows="true" uuid="217a0511-c55d-47b8-b4e2-c0ecc51b43ba"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="53" width="65" height="15" isPrintWhenDetailOverflows="true" uuid="ead6b23e-1476-4f73-8352-c9c726ea4264"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="15">
+			<subreport>
+				<reportElement x="0" y="0" width="190" height="10" uuid="e9874e82-a696-4f42-97e8-cfa18b4e2e89"/>
+				<subreportParameter name="net.sf.jasperreports.json.sources">
+					<subreportParameterExpression><![CDATA["data/b2breport.json"]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("Details")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR}.toString()+"sub-b2c-report2.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="29" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="556" height="1" uuid="fa5e88d5-a011-4e32-8f12-ce923f903111">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="1" width="595" height="24" forecolor="#D0B48E" backcolor="#D9F5B0" uuid="5d8169bd-4a75-48c8-8a68-6d3ad5ba9402"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="490" y="1" width="40" height="20" forecolor="#000000" uuid="e5e27efa-b599-499b-9ca3-848cb511cb7b"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}.toString()]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="393" y="1" width="80" height="20" forecolor="#000000" uuid="18cfe1ca-f7d6-48b0-9827-28578b42a5e0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}.toString()+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="2" width="197" height="20" forecolor="#000000" uuid="fbce24bb-3cb1-44a3-8eec-8c067ddbe5b5"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date().toString()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

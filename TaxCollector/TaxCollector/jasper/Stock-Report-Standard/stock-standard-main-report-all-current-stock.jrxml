@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="stock-standard-main-report-all-current-stock" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="df013db5-f76e-44d3-b0df-bcbc46d93160">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Stock Report"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="Title" fontName="DejaVu Serif" fontSize="50" isBold="true"/>
+	<style name="SubTitle" forecolor="#736343" fontName="DejaVu Serif" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="DejaVu Serif" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="DejaVu Serif" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#D9F5B0"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="logo" class="java.lang.Object"/>
+	<queryString language="json">
+		<![CDATA[root]]>
+	</queryString>
+	<field name="CompName" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="CompName"/>
+		<fieldDescription><![CDATA[CompName]]></fieldDescription>
+	</field>
+	<field name="ReportName" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="ReportName"/>
+		<fieldDescription><![CDATA[ReportName]]></fieldDescription>
+	</field>
+	<field name="CompanyAddress" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="CompanyAddress"/>
+		<fieldDescription><![CDATA[CompanyAddress]]></fieldDescription>
+	</field>
+	<field name="isVariation" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="isVariation"/>
+		<fieldDescription><![CDATA[isVariation]]></fieldDescription>
+	</field>
+	<field name="Total Stock" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Total Stock"/>
+		<fieldDescription><![CDATA[Total Stock]]></fieldDescription>
+	</field>
+	<field name="Total Stock Amount" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Total Stock Amount"/>
+		<fieldDescription><![CDATA[Total Stock Amount]]></fieldDescription>
+	</field>
+	<field name="Details" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Details"/>
+		<fieldDescription><![CDATA[Details]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="192" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="106" height="100" uuid="1c003177-754c-448f-8ce1-16868856f545">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="Title" x="107" y="0" width="341" height="40" uuid="b5e85fef-485d-4027-ad61-f26989d30cad">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="26"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CompName}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="SubTitle" x="107" y="58" width="341" height="22" forecolor="#000000" uuid="bc039f2f-240d-4334-b019-d58afedc2e8b">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ReportName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="107" y="41" width="341" height="16" uuid="854bb57b-7d51-4e92-b8d1-ad9cc7d299a7">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CompanyAddress}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="22" y="142" width="507" height="47" uuid="d2853197-9da0-4988-813e-99d41d0366ba"/>
+				<staticText>
+					<reportElement mode="Opaque" x="26" y="9" width="194" height="15" forecolor="#000000" backcolor="#FFFFFF" uuid="dd90bae9-229a-4716-8331-b13a23c31859"/>
+					<box>
+						<pen lineColor="#7A7878"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Total Stock]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Opaque" x="1" y="9" width="25" height="15" isPrintWhenDetailOverflows="true" forecolor="#736343" backcolor="#FFFFFF" uuid="b3659ea4-780a-4444-9c75-f342e23ecc93"/>
+					<box>
+						<pen lineColor="#7A7878"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="DejaVu Serif" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<frame>
+					<reportElement mode="Opaque" x="0" y="-27" width="506" height="19" forecolor="#D0B48E" backcolor="#9DBA6C" uuid="e302f748-fef3-4577-85ef-7c5a50fc34a7"/>
+					<staticText>
+						<reportElement x="0" y="0" width="506" height="18" backcolor="#9DBA6C" uuid="a2526285-2049-4b9f-b6b4-103fceb2114c">
+							<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						</reportElement>
+						<textElement verticalAlignment="Middle">
+							<font fontName="DejaVu Serif" size="14" isBold="true"/>
+						</textElement>
+						<text><![CDATA[SUMMARY]]></text>
+					</staticText>
+				</frame>
+				<textField>
+					<reportElement mode="Opaque" x="220" y="9" width="260" height="15" forecolor="#000000" backcolor="#FFFFFF" uuid="56fbc0e6-b1d3-4d1c-bf1a-5f85caeef10c"/>
+					<box>
+						<pen lineColor="#7A7878"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="11"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.text.DecimalFormat("Rs #,##0.00").format(Double.valueOf($F{Total Stock}))]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="1" y="24" width="25" height="15" isPrintWhenDetailOverflows="true" forecolor="#736343" backcolor="#FFFFFF" uuid="1a970cac-ad0a-4fc8-8f77-33854c90a1b1"/>
+					<box>
+						<pen lineColor="#7A7878"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font fontName="DejaVu Serif" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<textField>
+					<reportElement mode="Opaque" x="220" y="24" width="260" height="15" forecolor="#000000" backcolor="#FFFFFF" uuid="2e41fd8f-18c9-47dd-b75b-e30ccf0c0595">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box>
+						<pen lineColor="#7A7878"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="11"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.text.DecimalFormat("Rs #,##0.00").format(Double.valueOf($F{Total Stock Amount}))]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="26" y="24" width="194" height="15" forecolor="#000000" backcolor="#FFFFFF" uuid="98d72888-de57-46bc-b369-4353e8cd0fce">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					</reportElement>
+					<box>
+						<pen lineColor="#7A7878"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="11" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Total Stock Amount]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<subreport>
+				<reportElement x="3" y="6" width="190" height="10" uuid="42ce29e3-16b0-40a2-8178-9057e9ca7749">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("Details")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR}+"stock-standard-sub-report-all-current-stock.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="556" height="1" uuid="fa5e88d5-a011-4e32-8f12-ce923f903111">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="1" width="595" height="24" forecolor="#D0B48E" backcolor="#D9F5B0" uuid="5d8169bd-4a75-48c8-8a68-6d3ad5ba9402"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="473" y="1" width="40" height="20" forecolor="#000000" uuid="e5e27efa-b599-499b-9ca3-848cb511cb7b"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="393" y="1" width="80" height="20" forecolor="#000000" uuid="18cfe1ca-f7d6-48b0-9827-28578b42a5e0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#000000" uuid="fbce24bb-3cb1-44a3-8eec-8c067ddbe5b5"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

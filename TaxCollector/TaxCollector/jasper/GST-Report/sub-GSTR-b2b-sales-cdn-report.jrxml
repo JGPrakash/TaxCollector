@@ -1,0 +1,1127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sub-GSTR-b2b-sales-cdn-report" pageWidth="2612" pageHeight="2380" columnWidth="2612" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="eb2821f3-d0f8-4f6d-a31f-cf1ac5a70303">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="GSTR1SalesCDN"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<queryString language="json">
+		<![CDATA[root.Details]]>
+	</queryString>
+	<field name="Invoice date" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Invoice date"/>
+		<fieldDescription><![CDATA[Invoice date]]></fieldDescription>
+	</field>
+	<field name="Invoice Number" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Invoice Number"/>
+		<fieldDescription><![CDATA[Invoice Number]]></fieldDescription>
+	</field>
+	<field name="Invoice Type" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Invoice Type"/>
+		<fieldDescription><![CDATA[Invoice Type]]></fieldDescription>
+	</field>
+	<field name="Customer Name" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Customer Name"/>
+		<fieldDescription><![CDATA[Customer Name]]></fieldDescription>
+	</field>
+	<field name="Customer GSTIN" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Customer GSTIN"/>
+		<fieldDescription><![CDATA[Customer GSTIN]]></fieldDescription>
+	</field>
+	<field name="Place of Supply" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Place of Supply"/>
+		<fieldDescription><![CDATA[Place of Supply]]></fieldDescription>
+	</field>
+	<field name="IsItem" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="IsItem"/>
+		<fieldDescription><![CDATA[IsItem]]></fieldDescription>
+	</field>
+	<field name="Item Description" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Item Description"/>
+		<fieldDescription><![CDATA[Item Description]]></fieldDescription>
+	</field>
+	<field name="HSNorSAC code" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="HSNorSAC code"/>
+		<fieldDescription><![CDATA[HSNorSAC code]]></fieldDescription>
+	</field>
+	<field name="Item Quantity" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Item Quantity"/>
+		<fieldDescription><![CDATA[Item Quantity]]></fieldDescription>
+	</field>
+	<field name="Item Unit" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Item Unit"/>
+		<fieldDescription><![CDATA[Item Unit]]></fieldDescription>
+	</field>
+	<field name="Item Rate" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Item Rate"/>
+		<fieldDescription><![CDATA[Item Rate]]></fieldDescription>
+	</field>
+	<field name="Item Discount" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Item Discount"/>
+		<fieldDescription><![CDATA[Item Discount]]></fieldDescription>
+	</field>
+	<field name="Item Taxable Value" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Item Taxable Value"/>
+		<fieldDescription><![CDATA[Item Taxable Value]]></fieldDescription>
+	</field>
+	<field name="CGST Rate" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="CGST Rate"/>
+		<fieldDescription><![CDATA[CGST Rate]]></fieldDescription>
+	</field>
+	<field name="CGST Amount" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="CGST Amount"/>
+		<fieldDescription><![CDATA[CGST Amount]]></fieldDescription>
+	</field>
+	<field name="SGST Rate" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="SGST Rate"/>
+		<fieldDescription><![CDATA[SGST Rate]]></fieldDescription>
+	</field>
+	<field name="SGST Amount" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="SGST Amount"/>
+		<fieldDescription><![CDATA[SGST Amount]]></fieldDescription>
+	</field>
+	<field name="IGST Rate" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="IGST Rate"/>
+		<fieldDescription><![CDATA[IGST Rate]]></fieldDescription>
+	</field>
+	<field name="IGST Amount" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="IGST Amount"/>
+		<fieldDescription><![CDATA[IGST Amount]]></fieldDescription>
+	</field>
+	<field name="CESS Rate" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="CESS Rate"/>
+		<fieldDescription><![CDATA[CESS Rate]]></fieldDescription>
+	</field>
+	<field name="CESS Amount" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="CESS Amount"/>
+		<fieldDescription><![CDATA[CESS Amount]]></fieldDescription>
+	</field>
+	<field name="Reverse Charge" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Reverse Charge"/>
+		<fieldDescription><![CDATA[Reverse Charge]]></fieldDescription>
+	</field>
+	<field name="Bill Supply" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Bill Supply"/>
+		<fieldDescription><![CDATA[Bill Supply]]></fieldDescription>
+	</field>
+	<field name="Rated item" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Rated item"/>
+		<fieldDescription><![CDATA[Rated item]]></fieldDescription>
+	</field>
+	<field name="isDocCancel" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="isDocCancel"/>
+		<fieldDescription><![CDATA[isDocCancel]]></fieldDescription>
+	</field>
+	<field name="isIssuingCDN" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="isIssuingCDN"/>
+		<fieldDescription><![CDATA[isIssuingCDN]]></fieldDescription>
+	</field>
+	<field name="isPreGSTInvoice" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="isPreGSTInvoice"/>
+		<fieldDescription><![CDATA[isPreGSTInvoice]]></fieldDescription>
+	</field>
+	<field name="isInvoiceLinkedTo" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="isInvoiceLinkedTo"/>
+		<fieldDescription><![CDATA[isInvoiceLinkedTo]]></fieldDescription>
+	</field>
+	<field name="UIN registered" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="UIN registered"/>
+		<fieldDescription><![CDATA[UIN registered]]></fieldDescription>
+	</field>
+	<field name="Return Filing Month" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Return Filing Month"/>
+		<fieldDescription><![CDATA[Return Filing Month]]></fieldDescription>
+	</field>
+	<field name="Return Filing Quarter" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Return Filing Quarter"/>
+		<fieldDescription><![CDATA[Return Filing Quarter]]></fieldDescription>
+	</field>
+	<field name="Original Invoice Date" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Original Invoice Date"/>
+		<fieldDescription><![CDATA[Original Invoice Date]]></fieldDescription>
+	</field>
+	<field name="Original Invoice Number" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Original Invoice Number"/>
+		<fieldDescription><![CDATA[Original Invoice Number]]></fieldDescription>
+	</field>
+	<field name="Original Customer GSTIN" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Original Customer GSTIN"/>
+		<fieldDescription><![CDATA[Original Customer GSTIN]]></fieldDescription>
+	</field>
+	<field name="My GSTIN" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="My GSTIN"/>
+		<fieldDescription><![CDATA[My GSTIN]]></fieldDescription>
+	</field>
+	<field name="Customer Address" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Customer Address"/>
+		<fieldDescription><![CDATA[Customer Address]]></fieldDescription>
+	</field>
+	<field name="Customer City" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Customer City"/>
+		<fieldDescription><![CDATA[Customer City]]></fieldDescription>
+	</field>
+	<field name="Customer State" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Customer State"/>
+		<fieldDescription><![CDATA[Customer State]]></fieldDescription>
+	</field>
+	<field name="Total Transaction Value" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Total Transaction Value"/>
+		<fieldDescription><![CDATA[Total Transaction Value]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="93" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="54" width="60" height="39" forecolor="#000000" backcolor="#FCE5CD" uuid="99f0dd58-4438-4d9a-896f-0916f357d7ed"/>
+				<box topPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Credit/Debit Note Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="60" y="54" width="59" height="39" forecolor="#000000" backcolor="#FCE5CD" uuid="26750d1e-93df-42ff-beaf-15be7c288d3d"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Credit/Debit Note Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="119" y="54" width="55" height="39" forecolor="#000000" backcolor="#FCE5CD" uuid="3a54d79a-5a1b-40dd-ab26-19a4025ff214"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Credit(C)/Debit(D) Note Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="174" y="54" width="52" height="39" forecolor="#000000" backcolor="#FCE5CD" uuid="61750c00-16cb-4961-b29b-1b674b0b265b"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Linked Invoice Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="280" y="54" width="89" height="39" forecolor="#000000" backcolor="#FEFFDF" uuid="e610af17-cc8b-476d-84ba-afa157ce5791"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Billing Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="369" y="54" width="71" height="39" forecolor="#000000" backcolor="#FEFFDF" uuid="e73da2ef-f64f-430c-8592-b5fe99d4676c"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Billing GSTIN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="440" y="54" width="79" height="39" forecolor="#000000" backcolor="#FCE5CD" uuid="944bb7b1-5238-4f88-80fc-20c6ecbb2882"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[State Place of Supply]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="519" y="54" width="47" height="39" forecolor="#000000" backcolor="#FFFFFF" uuid="d63f6050-63c5-444e-8dc5-42c748b9d881"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Is the item a GOOD (G) or SERVICE (S)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="566" y="54" width="84" height="39" forecolor="#000000" backcolor="#FFFFFF" uuid="f8e18b33-cca8-4e1d-9936-115c11624c22"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="226" y="54" width="54" height="39" forecolor="#000000" backcolor="#FCE5CD" uuid="5ede058c-08fc-42a3-997e-e87aa1a51503"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Linked Invoice Number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="14" width="174" height="40" uuid="10a0272c-2ff5-4044-aee7-7127ecbd0201"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="6"/>
+				</textElement>
+				<text><![CDATA[*Credit/Debit Note details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="174" y="14" width="266" height="40" uuid="7e5e5b36-b0a5-48de-abcd-27f9b31adaea">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="6"/>
+				</textElement>
+				<text><![CDATA[*Invoice details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="650" y="54" width="68" height="39" backcolor="#FFFFFF" uuid="5ee8f022-e2c6-4e9c-b2aa-24fa86301737"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HSN or SAC code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="718" y="54" width="42" height="39" backcolor="#FFFFFF" uuid="0daff52f-86cb-4cca-a78e-54a67daf50e9"/>
+				<box leftPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item Quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="760" y="54" width="69" height="39" backcolor="#FFFFFF" uuid="87c4f6c6-92b5-4054-ac6f-a0e0a888ac67"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item Unit of Measurement]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="829" y="54" width="40" height="39" backcolor="#FFFFFF" uuid="3114736a-1550-4d30-b6f1-240227e0cf99"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item Rate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="909" y="54" width="40" height="39" backcolor="#FCE5CD" uuid="870211bf-5a4e-40b6-82c3-bf250dc96869"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Item Taxable Value]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="949" y="54" width="40" height="39" backcolor="#FEFFDF" uuid="41cc1930-2429-4bc4-bcaf-6bbb070c769f"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CGST Rate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="989" y="54" width="50" height="39" backcolor="#FEFFDF" uuid="398c1bfd-7184-4444-a19c-c554c067cc34"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CGST Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1039" y="54" width="40" height="39" backcolor="#FEFFDF" uuid="1cec44ad-8d42-4e49-88a4-cbba67882536"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SGST Rate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1079" y="54" width="50" height="39" backcolor="#FEFFDF" uuid="698c9102-5885-44bf-967b-9b793b0d1f33"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SGST Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1129" y="54" width="50" height="39" backcolor="#FEFFDF" uuid="752c19fa-8ddf-4c8b-b32b-52137c469a1d"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IGST Rate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1179" y="54" width="50" height="39" backcolor="#FEFFDF" uuid="56002572-8d45-4b77-b805-a73f47cc3e7c"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[IGST Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1229" y="54" width="50" height="39" backcolor="#FFFFFF" uuid="ba6140fc-df4c-4a13-a0a1-456baec97f19"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CESS Rate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1279" y="54" width="50" height="39" backcolor="#FEFFDF" uuid="386c5bbc-cf05-4cc1-835c-f2d5906ef5cb"/>
+				<box leftPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CESS Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="519" y="14" width="390" height="40" uuid="1a547c04-f736-4aff-b2b2-c06989cb80e1"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="6"/>
+				</textElement>
+				<text><![CDATA[*Provide these details for HSN summary under GST Return flow]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1399" y="54" width="60" height="39" backcolor="#FEFFDF" uuid="2ff3bb67-2c24-4443-9387-222ed94773d6"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Is this note for Bill of Supply?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1459" y="54" width="60" height="39" backcolor="#FEFFDF" uuid="d31fe0a4-2548-44b4-82ae-c68f0e65ed3f"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Is this a Nil Rated/Exempt/NonGST item?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1519" y="54" width="60" height="39" backcolor="#FEFFDF" uuid="d7291021-bcd8-44bd-a890-de53f1c3ec4e"/>
+				<box leftPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Is this document cancelled?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1951" y="14" width="200" height="40" uuid="5cf22bfa-00ab-4ef0-9e11-6832fe23013a"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<text><![CDATA[*Mandatory for Claim ITC part under GSTR-2 flow]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1579" y="54" width="72" height="39" backcolor="#FEFFDF" uuid="5e47ff53-a2ac-4619-8f1f-b1ca53300192"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reason for issuing CDN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1651" y="54" width="60" height="39" backcolor="#FEFFDF" uuid="a15f5950-9173-4e05-bbab-35340f439176"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Is this note for a Pre-GST Invoice?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1711" y="54" width="60" height="39" backcolor="#FEFFDF" uuid="bd6b9167-81d3-4e8e-ab4c-3685bdd63ebf"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Which type of Invoice is this note linked to?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1771" y="54" width="60" height="39" uuid="5c7da548-10c3-49aa-9dcb-da678d15073c"/>
+				<box leftPadding="2">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Is the customer a Composition dealer or UIN registered?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1831" y="54" width="60" height="39" backcolor="#FEFFDF" uuid="37aef3d7-60a3-462a-9523-2c359e176898"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Return Filing Month]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1891" y="54" width="60" height="39" backcolor="#FEFFDF" uuid="d32c9800-9030-43a6-a497-0e9263b9edae"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Return Filing Quarter]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1951" y="54" width="60" height="39" backcolor="#FEFFDF" uuid="e694e30e-b056-462e-8092-e9e94a75ef2c"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Original Credit/Debit Note Date (In case of amendment)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="2011" y="54" width="70" height="39" backcolor="#FEFFDF" uuid="779ffb6e-bc5f-4c19-acd9-7f1ff3a70977"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Original Credit/Debit Note Number (In case of amendment)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="2081" y="54" width="70" height="39" backcolor="#FEFFDF" uuid="2b1a9cd8-a073-471e-97c4-aa388bb241c6"/>
+				<box leftPadding="3">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Original Customer Billing  GSTIN (In case of amendment)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="2151" y="54" width="80" height="39" backcolor="#FFFFFF" uuid="89f36b7a-f8d7-4501-814a-13acca660568"/>
+				<box leftPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[My GSTIN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="2311" y="54" width="80" height="39" backcolor="#FFFFFF" uuid="10531b12-7968-40e9-8fa1-28413c9e3703"/>
+				<box leftPadding="4">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Billing City]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="2391" y="54" width="80" height="39" backcolor="#FFFFFF" uuid="b6927371-e70e-42a1-83b9-c28d40df688d"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Billing State]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1831" y="14" width="120" height="40" uuid="15d1e648-5007-4692-9cc5-33a880bf00c7"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<text><![CDATA[*Mandatory incase of Import of Goods]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="14" width="79" height="40" uuid="e6c61b35-f5a4-4b36-9a76-e00885c1aa4d"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<text><![CDATA[This is destination of the product, typically your state.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="869" y="54" width="40" height="39" backcolor="#FFFFFF" uuid="74e89011-4403-49a9-ad58-0d34b7140ea6"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Item Discount Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="1329" y="54" width="70" height="39" backcolor="#FEFFDF" uuid="90f6dd32-6d55-4651-89f4-93750795d48d"/>
+				<box leftPadding="1">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Is Reverse Charge Applicable?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="949" y="14" width="380" height="40" uuid="81d8657c-d8c6-4450-9e13-f005e7a26d64"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<text><![CDATA[*Tax details (Note should have either CGST & SGST or IGST value based of Place of Supply)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="2471" y="54" width="141" height="39" backcolor="#FEFFDF" uuid="b1ee4d50-7f23-4b73-a71d-1ecdd7c72827"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Transaction Value]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2471" y="14" width="141" height="40" uuid="aeaf7fd4-85fd-49a3-ae21-e45aae430669"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement>
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<text><![CDATA[*Enter total invoice value here. If you have more than one line in the invoice, repeat the same value for every line.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="2231" y="54" width="80" height="39" backcolor="#FFFFFF" uuid="cc252854-1608-41ca-820e-528a34f5420d"/>
+				<box leftPadding="4">
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Billing Address]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="60" height="15" isPrintWhenDetailOverflows="true" uuid="66b6a8b9-89eb-4fd0-a7aa-2152b92fc465"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Invoice date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="0" width="59" height="15" isPrintWhenDetailOverflows="true" uuid="c28c3db2-2a07-4fdc-a640-0d469a74729b"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Invoice Number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="119" y="0" width="55" height="15" isPrintWhenDetailOverflows="true" uuid="e039b416-918c-4748-af56-2bbc96af09aa"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Invoice Type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="174" y="0" width="52" height="15" isPrintWhenDetailOverflows="true" uuid="4cc04ee7-1541-4f97-8376-eb80e23fe437"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Invoice date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="89" height="15" isPrintWhenDetailOverflows="true" uuid="73cd742c-0f93-423c-a0f6-6497ecfb5e0f"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Customer Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="369" y="0" width="71" height="15" isPrintWhenDetailOverflows="true" uuid="40b737c7-b647-488c-86ca-e7cf11ce4885"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Customer GSTIN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="0" width="79" height="15" isPrintWhenDetailOverflows="true" uuid="4c29fb47-a895-4ff8-8372-f6d7d112b51a"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Place of Supply}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="519" y="0" width="47" height="15" isPrintWhenDetailOverflows="true" uuid="11dcb8b3-87e3-4aae-b63b-2a8af11758fe"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item Quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="566" y="0" width="84" height="15" isPrintWhenDetailOverflows="true" uuid="1d9fb318-cde9-4201-8e16-86d622f50988"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item Unit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="226" y="0" width="54" height="15" isPrintWhenDetailOverflows="true" uuid="38d761ed-958b-4f29-a032-2fec8b6cee3c"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Invoice Number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="650" y="0" width="68" height="15" uuid="8ea9b8d1-ef2c-47f3-a5a0-312581071f3f"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HSNorSAC code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="718" y="0" width="42" height="15" uuid="32c56e4e-79e5-42d1-a0d4-d656696ca742"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item Quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="760" y="0" width="69" height="15" uuid="9ac739be-34f2-4df8-9602-b6e5f05d5a5f"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item Unit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="829" y="0" width="40" height="15" uuid="c370de0c-28a7-40df-b9ea-af8272ba744f"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item Rate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="869" y="0" width="40" height="15" uuid="97bbaa4a-b086-462f-b901-8ba33466f10d"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item Discount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="909" y="0" width="40" height="15" uuid="f62168bf-45d0-429b-844a-05b497248d50"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Item Taxable Value}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="949" y="0" width="40" height="15" uuid="e6599f31-5c30-46fa-af55-5cf0e5543716"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CGST Rate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="989" y="0" width="50" height="15" uuid="2285dfc7-5ed4-4a12-b8a7-59beac8193c4"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CGST Amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1039" y="0" width="40" height="15" uuid="db5ba00f-6a04-44b2-b8c9-704d946f5a3a"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SGST Rate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1079" y="0" width="50" height="15" uuid="4a84452c-5ad0-4dc1-ba0c-e1c8e67c28d4"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SGST Amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1129" y="0" width="50" height="15" uuid="c7251661-0779-4038-9a55-d11e14c9e85f"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{IGST Rate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1179" y="0" width="50" height="15" uuid="42f58b61-1977-4e90-aa28-33efd32ed4f3"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{IGST Amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1229" y="0" width="50" height="15" uuid="07c85e62-82ff-4b15-beae-44273efae29f"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CESS Rate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1279" y="0" width="50" height="15" uuid="817b95e9-9fd3-4af8-a219-1796f87a17c6"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CESS Amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1399" y="0" width="60" height="15" uuid="524d0de7-4243-4253-895f-dff7c1739f0f"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Bill Supply}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1459" y="0" width="60" height="15" uuid="6bfb74c9-80df-40cf-9123-72be2cd4c0f6"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Rated item}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1519" y="0" width="60" height="15" uuid="29fc5228-05d4-4963-9246-c573e1f138ba"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{isDocCancel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1579" y="0" width="72" height="15" uuid="6f3c57ba-7823-427f-9b26-9d9ac3d61a9a"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{isIssuingCDN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1651" y="0" width="60" height="15" uuid="c0b566c8-d843-453b-a5b5-b185e74d5a3f"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{isPreGSTInvoice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1711" y="0" width="60" height="15" uuid="0e71ce9d-4895-4718-9192-5f09be5ac1fb"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{isInvoiceLinkedTo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1771" y="0" width="60" height="15" uuid="9fa2a6a4-4c69-480c-84bd-7dbb22bfce34"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{UIN registered}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1831" y="0" width="60" height="15" uuid="e354d956-a1fd-44e0-9cc5-429e4bb7188e"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Return Filing Month}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1891" y="0" width="60" height="15" uuid="f6cc09b9-5bf5-400f-bff5-86107368a3e7"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Return Filing Quarter}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1951" y="0" width="60" height="15" uuid="a620302d-9681-4137-8f93-09e4a763f0b5"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Original Invoice Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2011" y="0" width="70" height="15" uuid="3852b031-eb29-4d1a-a6db-6e60cc4bab79"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Original Invoice Number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2081" y="0" width="70" height="15" uuid="c24cf9ab-b9af-44e5-93ea-a561051da3bf"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Original Customer GSTIN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2151" y="0" width="80" height="15" uuid="4e7aec3a-36a5-434e-bb0a-1ea47d3c6d4e"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{My GSTIN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2311" y="0" width="80" height="15" uuid="8b9230c5-800e-4d54-abed-ee04cbe7b31c"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Customer City}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2391" y="0" width="80" height="15" uuid="faabae75-0a80-44b5-a0b2-31f5e9c68107"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Customer State}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1329" y="0" width="70" height="15" uuid="f702dcb5-56f4-43db-80d7-2d0dbb3e6b99"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Reverse Charge}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2471" y="0" width="141" height="15" uuid="42ceaa04-884e-4fa0-a92a-57465f44bfdb"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Total Transaction Value}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2231" y="0" width="80" height="15" uuid="8f62fb76-193a-49fe-823a-9127b7f6e183"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#BEBEBE"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans Mono" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Customer Address}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cust" pageWidth="595" pageHeight="842" columnWidth="595" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="0edc8bdb-1ee3-4176-95d5-ed6d41e9aeae">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Customer"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString language="json">
+		<![CDATA[root.Customer]]>
+	</queryString>
+	<field name="CustNo" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="CustNo"/>
+		<fieldDescription><![CDATA[CustNo]]></fieldDescription>
+	</field>
+	<field name="CustName" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="CustName"/>
+		<fieldDescription><![CDATA[CustName]]></fieldDescription>
+	</field>
+	<field name="PhoneNo" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="PhoneNo"/>
+		<fieldDescription><![CDATA[PhoneNo]]></fieldDescription>
+	</field>
+	<field name="Email" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Email"/>
+		<fieldDescription><![CDATA[Email]]></fieldDescription>
+	</field>
+	<field name="Address" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Address"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<group name="CustNo">
+		<groupExpression><![CDATA[$F{CustNo}]]></groupExpression>
+	</group>
+	<group name="CustName">
+		<groupExpression><![CDATA[$F{CustName}]]></groupExpression>
+	</group>
+	<group name="PhoneNo">
+		<groupExpression><![CDATA[$F{PhoneNo}]]></groupExpression>
+	</group>
+	<group name="Email">
+		<groupExpression><![CDATA[$F{Email}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="50" height="30" forecolor="#1A1717" backcolor="#FFFFFF" uuid="98883bed-b2d3-4a19-beff-ed21e8b0dc70"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#9C9494"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Cust No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="50" y="0" width="120" height="30" forecolor="#1A1111" backcolor="#FCF7F7" uuid="3118b48a-0190-49e1-989d-9eb243cd86e4"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#9C9494"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Customer Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="170" y="0" width="100" height="30" forecolor="#1F1515" backcolor="#FFFAFA" uuid="82f53212-a992-4472-a6f9-08e3041907c2"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#9C9494"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Mobile No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="270" y="0" width="110" height="30" forecolor="#241D1D" backcolor="#FAF0F0" uuid="590a340e-62e4-4582-85c2-153e5e145284"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#9C9494"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="380" y="0" width="173" height="30" forecolor="#1A1414" backcolor="#FCF7F7" uuid="3e5986c8-8e99-4624-9912-e287601253e6"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#9C9494"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<textField>
+				<reportElement x="0" y="0" width="50" height="30" isPrintWhenDetailOverflows="true" uuid="d55de7c9-272c-4048-ac0c-c6a1c03fc522"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="1.0" lineColor="#9C9494"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CustNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="0" width="120" height="30" isPrintWhenDetailOverflows="true" uuid="ccc42dbb-2a8f-4ba8-9306-00f38969c0d5"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#9C9494"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CustName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="0" width="100" height="30" isPrintWhenDetailOverflows="true" uuid="55feaa82-077b-42e7-864d-bea97f2e8b96"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#9C9494"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PhoneNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="0" width="110" height="30" isPrintWhenDetailOverflows="true" uuid="9107920b-3272-4d18-9fea-05131e89a575"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#9C9494"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="173" height="30" isPrintWhenDetailOverflows="true" uuid="4e9c7728-430d-4bc2-a204-9c9224a75ffa"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#9C9494"/>
+				</box>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Address}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</summary>
+</jasperReport>

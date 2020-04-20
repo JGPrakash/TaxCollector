@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="velan-stock-standard-main-report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="df013db5-f76e-44d3-b0df-bcbc46d93160">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Velan Stock Report"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="Title" fontName="DejaVu Sans Mono" fontSize="50" isBold="true"/>
+	<style name="SubTitle" forecolor="#736343" fontName="DejaVu Sans Mono" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="DejaVu Sans Mono" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="DejaVu Sans Mono" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#D9F5B0"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<parameter name="logo" class="java.lang.Object"/>
+	<queryString language="json">
+		<![CDATA[root]]>
+	</queryString>
+	<field name="CompName" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="CompName"/>
+		<fieldDescription><![CDATA[CompName]]></fieldDescription>
+	</field>
+	<field name="ReportName" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="ReportName"/>
+		<fieldDescription><![CDATA[ReportName]]></fieldDescription>
+	</field>
+	<field name="CompanyAddress" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="CompanyAddress"/>
+		<fieldDescription><![CDATA[CompanyAddress]]></fieldDescription>
+	</field>
+	<field name="Summary Name" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Summary Name"/>
+		<fieldDescription><![CDATA[Summary Name]]></fieldDescription>
+	</field>
+	<field name="Stock Summary Name" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Stock Summary Name"/>
+		<fieldDescription><![CDATA[Stock Summary Name]]></fieldDescription>
+	</field>
+	<field name="Opening Stock Name" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Opening Stock Name"/>
+		<fieldDescription><![CDATA[Opening Stock Name]]></fieldDescription>
+	</field>
+	<field name="Closing Stock Name" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Closing Stock Name"/>
+		<fieldDescription><![CDATA[Closing Stock Name]]></fieldDescription>
+	</field>
+	<field name="Opening Stock Amount Name" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Opening Stock Amount Name"/>
+		<fieldDescription><![CDATA[Opening Stock Amount Name]]></fieldDescription>
+	</field>
+	<field name="Closing Stock Amount Name" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Closing Stock Amount Name"/>
+		<fieldDescription><![CDATA[Closing Stock Amount Name]]></fieldDescription>
+	</field>
+	<field name="Purchased Summary Name" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Purchased Summary Name"/>
+		<fieldDescription><![CDATA[Purchased Summary Name]]></fieldDescription>
+	</field>
+	<field name="Stock Purchased Name" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Stock Purchased Name"/>
+		<fieldDescription><![CDATA[Stock Purchased Name]]></fieldDescription>
+	</field>
+	<field name="Current Stock Name" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Current Stock Name"/>
+		<fieldDescription><![CDATA[Current Stock Name]]></fieldDescription>
+	</field>
+	<field name="Purchased Stock Amount Name" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Purchased Stock Amount Name"/>
+		<fieldDescription><![CDATA[Purchased Stock Amount Name]]></fieldDescription>
+	</field>
+	<field name="Current Stock Amount Name" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Current Stock Amount Name"/>
+		<fieldDescription><![CDATA[Current Stock Amount Name]]></fieldDescription>
+	</field>
+	<field name="Opening Stock" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Opening Stock"/>
+		<fieldDescription><![CDATA[Opening Stock]]></fieldDescription>
+	</field>
+	<field name="Closing Stock" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Closing Stock"/>
+		<fieldDescription><![CDATA[Closing Stock]]></fieldDescription>
+	</field>
+	<field name="Opening Stock Amount" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Opening Stock Amount"/>
+		<fieldDescription><![CDATA[Opening Stock Amount]]></fieldDescription>
+	</field>
+	<field name="Closing Stock Amount" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Closing Stock Amount"/>
+		<fieldDescription><![CDATA[Closing Stock Amount]]></fieldDescription>
+	</field>
+	<field name="Stock Purchased" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Stock Purchased"/>
+		<fieldDescription><![CDATA[Stock Purchased]]></fieldDescription>
+	</field>
+	<field name="Current Stock" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Current Stock"/>
+		<fieldDescription><![CDATA[Current Stock]]></fieldDescription>
+	</field>
+	<field name="Purchased Stock Amount" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Purchased Stock Amount"/>
+		<fieldDescription><![CDATA[Purchased Stock Amount]]></fieldDescription>
+	</field>
+	<field name="Current Stock Amount" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Current Stock Amount"/>
+		<fieldDescription><![CDATA[Current Stock Amount]]></fieldDescription>
+	</field>
+	<field name="Details" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Details"/>
+		<fieldDescription><![CDATA[Details]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="299" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="106" height="100" uuid="1c003177-754c-448f-8ce1-16868856f545">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="Title" x="107" y="0" width="341" height="40" uuid="b5e85fef-485d-4027-ad61-f26989d30cad">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="26"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CompName}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="SubTitle" x="107" y="58" width="341" height="22" forecolor="#000000" uuid="bc039f2f-240d-4334-b019-d58afedc2e8b">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ReportName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="107" y="41" width="341" height="16" uuid="854bb57b-7d51-4e92-b8d1-ad9cc7d299a7">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Serif" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CompanyAddress}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="0" y="107" width="551" height="188" uuid="2a5ed841-1f42-4f65-a5c1-4a1d9d7be591"/>
+				<textField>
+					<reportElement x="10" y="30" width="230" height="20" uuid="14032584-4b97-414b-9c39-991f1abebf86"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Stock Summary Name}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="10" y="56" width="141" height="20" uuid="2232a7e2-000d-4fb2-acbe-d9cf51482432"/>
+					<textFieldExpression><![CDATA[$F{Opening Stock Name}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="10" y="82" width="141" height="20" uuid="1af0beb4-d7eb-4b6f-a0cf-65c501b15665"/>
+					<textFieldExpression><![CDATA[$F{Closing Stock Name}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="160" y="56" width="110" height="20" uuid="2c89dec1-93de-46f8-9082-b5387157acd5"/>
+					<textFieldExpression><![CDATA[$F{Opening Stock}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="160" y="81" width="110" height="20" uuid="bac9ca43-531c-4186-9a3d-f65bc5e70eaf"/>
+					<textFieldExpression><![CDATA[$F{Closing Stock}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="437" y="56" width="110" height="20" uuid="3f50375c-05f4-4b87-9ad8-cabd380e96fc">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{Opening Stock Amount}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="287" y="56" width="141" height="20" uuid="2351f3b0-7d04-4e52-80e9-f106d06c68f7"/>
+					<textFieldExpression><![CDATA[$F{Opening Stock Amount Name}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="437" y="81" width="110" height="20" uuid="7a61a4d6-e329-409a-88c3-0b49a32956a1"/>
+					<textFieldExpression><![CDATA[$F{Closing Stock Amount}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="287" y="82" width="141" height="20" uuid="d964a1a8-2262-4475-9b6a-03a2e3212ce5"/>
+					<textFieldExpression><![CDATA[$F{Closing Stock Amount Name}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="437" y="133" width="110" height="20" uuid="1a4f2408-033e-425b-8810-3c135418d440">
+						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					</reportElement>
+					<textFieldExpression><![CDATA[$F{Purchased Stock Amount}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="287" y="133" width="141" height="20" uuid="8a158e5f-606f-4f86-997e-3ab0c5424f94"/>
+					<textFieldExpression><![CDATA[$F{Purchased Stock Amount Name}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="437" y="158" width="110" height="20" uuid="db93ae47-0c64-497f-97ff-6c91ec90bcfd"/>
+					<textFieldExpression><![CDATA[$F{Current Stock Amount}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="287" y="158" width="141" height="20" uuid="37695226-4394-43f5-8f80-89af1a70c32f"/>
+					<textFieldExpression><![CDATA[$F{Current Stock Amount Name}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="160" y="133" width="110" height="20" uuid="b8213cef-4261-4347-8ba2-d0c684a7352d"/>
+					<textFieldExpression><![CDATA[$F{Stock Purchased}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="160" y="158" width="110" height="20" uuid="a678a56f-ec2a-45be-947b-543aa99fe27b"/>
+					<textFieldExpression><![CDATA[$F{Current Stock}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="10" y="133" width="141" height="20" uuid="385d1006-b8d2-4d33-a47a-08669fb0262c"/>
+					<textFieldExpression><![CDATA[$F{Stock Purchased Name}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="10" y="158" width="141" height="20" uuid="e5172ac5-3e86-441f-af06-c10afef96ba0"/>
+					<textFieldExpression><![CDATA[$F{Current Stock Name}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="10" y="107" width="230" height="20" uuid="254764ef-b47f-4062-bf15-c214ad171af0"/>
+					<textElement>
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Purchased Summary Name}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="10" y="4" width="230" height="20" uuid="6efa3a9a-7d62-46e0-b916-7cf05108f392"/>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{Summary Name}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<subreport>
+				<reportElement x="-14" y="5" width="190" height="10" uuid="023f6224-9aff-4255-9791-04bd18b8634a">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("Details")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR}+"velan-stock-standard-sub-report.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="556" height="1" uuid="fa5e88d5-a011-4e32-8f12-ce923f903111">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="1" width="595" height="24" forecolor="#D0B48E" backcolor="#D9F5B0" uuid="5d8169bd-4a75-48c8-8a68-6d3ad5ba9402"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="473" y="1" width="40" height="20" forecolor="#000000" uuid="e5e27efa-b599-499b-9ca3-848cb511cb7b"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="393" y="1" width="80" height="20" forecolor="#000000" uuid="18cfe1ca-f7d6-48b0-9827-28578b42a5e0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#000000" uuid="fbce24bb-3cb1-44a3-8eec-8c067ddbe5b5"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Serif" size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

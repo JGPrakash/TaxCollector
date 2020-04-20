@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+
+    <script src="/config/config.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+
+        document.write('<script src="/'+ appConfig.root + '/core/master.js" type="text/javascript" > <\/script> ');
+        document.write('<link href="/' + appConfig.root + '/taxcollector/view/scheme/scheme.css" rel="stylesheet" />');
+        document.write('<script src="/' + appConfig.root + '/taxcollector/view/scheme/scheme.js"><\/script>');
+        document.write('<script src="/' + appConfig.root + '/taxcollector/service/scheme-service-api.js"><\/script>');
+
+        //Tamil Font
+        document.write('<script src="/' + appConfig.root + '/core/tamil-common.js" type="text/javascript" > <\/script> ');
+        document.write('<script src="/' + appConfig.root + '/core/tamil.js" type="text/javascript" > <\/script> ');
+
+    </script>
+
+</head>
+
+
+<body control="page.schemePage" controlId="schemePage">
+
+
+
+    <div control="schemePage.masterPage" controlId="masterPage"></div>
+    <div style="margin-top:-20px">
+
+        <!--Load Content Area-->
+        <div class="container-fluid">
+
+
+            <div class="content-area row">
+                <div control="schemePage.messagePanel" controlid="msgPanel" class="message-panel" style="display:none">
+                </div>
+                <div class="search-panel col-sm-4" default-button="btnSearch">
+
+                    <div class="search-action">
+                        <hr>
+                        <input type="button" value="Search" rlabel="Search" control="schemePage.primaryReadButton" controlId="btnSearch" event="click:btnSearch_click" />
+
+                    </div>
+
+                    <div class="search-filter">
+                        <div>
+
+                            <input type="text" control="schemePage.textBox" controlId="txtSearchInput" rlabel="Enter scheme id or name" placeholder="Enter scheme id or name">
+                        </div>
+
+
+
+                    </div>
+                    <div class="search-result">
+                        <div control="schemePage.grid" controlId="grdSearchResult"> </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <span class="label" rlabel="F1 - New"> F1 - New </span>
+                        <span class="label" rlabel="F2 - Save"> F2 - Save </span>
+                        <span class="label" rlabel="Ctrl + R - Remove"> Ctrl + R - Remove </span>
+                    </div>
+                </div>
+                <div class="detail-panel  col-sm-8">
+
+                    <div class="detail-action">
+                        <input type="button" value="New" rlabel="New" control="schemePage.primaryReadButton" controlId="btnNew" event="click:btnNew_click" />
+
+                        <input type="button" value="Save" rlabel="Save" control="schemePage.primaryReadButton" controlId="btnSave" event="click:btnSave_click" />
+
+                        <input type="button" value="Remove" rlabel="Remove" control="schemePage.secondaryButton" controlId="btnDelete" event="click:btnDelete_click" />
+
+                    </div>
+
+                    <div class="detail-info container-fluid">
+                        <div class="detail-basic row">
+                            <span class="label col-sm-12" rlabel="Scheme Details"><b>Scheme Details:</b></span>
+                            <div class="col-sm-6">
+                                <span class="label col-sm-4" rlabel="Name*">Name</span>
+                                <input class="col-sm-8" type="text" control="schemePage.textBox" controlId="txtName" rlabel="Name" placeholder="Name">
+                            </div>
+                            <div class="col-sm-6 ">
+                                <span class="label  col-sm-4" rlabel="Start Date">Start Date</span>
+                                <input class="col-sm-8" rlabel="Start Date" controlId="txtStartDate" control="schemePage.dateSelector" />
+                            </div>
+                            <div class="col-sm-6 ">
+                                <span class="label  col-sm-4" rlabel="End Date">End Date</span>
+                                <input class="col-sm-8" rlabel="End Date" controlId="txtEndDate" control="schemePage.dateSelector" />
+                            </div>
+                            <div class="col-sm-6 ">
+                                <span class="label  col-sm-4" rlabel="Notes">Notes</span>
+                                <textarea class="col-sm-8" rows="4" type="text" control="schemePage.textBox" controlId="txtNotes" rlabel="Notes" placeholder="Notes"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

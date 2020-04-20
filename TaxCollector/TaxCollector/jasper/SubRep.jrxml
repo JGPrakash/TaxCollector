@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubRep" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e9deafef-fe2c-40fd-9900-4d416ef3538e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SubRep"/>
+	<parameter name="SUBREPORT_JASPER_FILE" class="java.lang.Object"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String"/>
+	<queryString language="json">
+		<![CDATA[root]]>
+	</queryString>
+	<field name="Phone" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Phone"/>
+		<fieldDescription><![CDATA[Phone]]></fieldDescription>
+	</field>
+	<field name="ContactName" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="ContactName"/>
+		<fieldDescription><![CDATA[ContactName]]></fieldDescription>
+	</field>
+	<field name="Fax" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Fax"/>
+		<fieldDescription><![CDATA[Fax]]></fieldDescription>
+	</field>
+	<field name="Address" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Address"/>
+		<fieldDescription><![CDATA[Address]]></fieldDescription>
+	</field>
+	<field name="CustomerID" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="CustomerID"/>
+		<fieldDescription><![CDATA[CustomerID]]></fieldDescription>
+	</field>
+	<field name="CompanyName" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="CompanyName"/>
+		<fieldDescription><![CDATA[CompanyName]]></fieldDescription>
+	</field>
+	<field name="Country" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Country"/>
+		<fieldDescription><![CDATA[Country]]></fieldDescription>
+	</field>
+	<field name="City" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="City"/>
+		<fieldDescription><![CDATA[City]]></fieldDescription>
+	</field>
+	<field name="ContactTitle" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="ContactTitle"/>
+		<fieldDescription><![CDATA[ContactTitle]]></fieldDescription>
+	</field>
+	<field name="Orders" class="java.lang.String">
+		<property name="net.sf.jasperreports.json.field.expression" value="Orders"/>
+		<fieldDescription><![CDATA[Orders]]></fieldDescription>
+	</field>
+	<group name="Group1">
+		<groupHeader>
+			<band height="50"/>
+		</groupHeader>
+		<groupFooter>
+			<band height="50"/>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="50" y="15" width="100" height="30" uuid="89416994-eaf3-4eb8-81da-e5bec675fcff"/>
+				<text><![CDATA[CustomerID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="31" width="100" height="30" uuid="9f3c0bdf-e7c6-4507-909f-8d342db78fd7"/>
+				<text><![CDATA[CompanyName]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="73" splitType="Stretch">
+			<textField>
+				<reportElement x="60" y="20" width="100" height="30" uuid="71637fa9-712c-4e30-a355-35ec77655b83"/>
+				<textFieldExpression><![CDATA[$F{CustomerID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="30" width="100" height="30" uuid="ee55e2ed-34c8-485e-9b0c-8739284a0dfc"/>
+				<textFieldExpression><![CDATA[$F{CompanyName}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="200">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<subreport>
+				<reportElement key="" isPrintRepeatedValues="false" x="20" y="10" width="510" height="170" uuid="7592578a-9048-440a-bbd0-9eb4501fe7fa"/>
+				<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JsonDataSource)$P{REPORT_DATA_SOURCE}).subDataSource("Orders")]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR}+"SubRep1.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

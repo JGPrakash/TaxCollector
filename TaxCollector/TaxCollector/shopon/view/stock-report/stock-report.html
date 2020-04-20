@@ -1,0 +1,199 @@
+﻿<!doctype html>
+<html>
+
+<head>
+
+
+    <script src="/config/config.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        document.write('<script src="/' + appConfig.root + '/core/master.js" type="text/javascript" > <\/script> ');
+        document.write('<script src="/' + appConfig.root + '/login/service/user/user-service.js"><\/script>');
+
+        document.write('<link href="/' + appConfig.root + '/shopon/view/stock-report/stock-report.css" rel="stylesheet" />');
+        document.write('<script src="/' + appConfig.root + '/shopon/view/stock-report/stock-report.js"><\/script>');
+
+        document.write('<script src="/' + appConfig.root + '/shopon/service/sales/customer-service.js"><\/script>');
+        document.write('<script src="/' + appConfig.root + '/shopon/service/product/item-api.js"><\/script>');
+        document.write('<script src="/' + appConfig.root + '/shopon/service/w3data/w3data.js"><\/script>');
+        document.write('<script src="/' + appConfig.root + '/shopon/service/inventory/inventory-service.js"><\/script>');
+        document.write('<script src="/' + appConfig.root + '/shopon/service/report/dynareport-service.js"><\/script>');
+
+        document.write('<script src="/' + appConfig.root + '/shopon/service/report/report-service.js"><\/script>');
+
+        document.write('<script src="/' + appConfig.root + '/shopon/service/report/report-api.js"><\/script>');
+        document.write('<script src="/' + appConfig.root + '/shopon/service/product/item-api.js"><\/script>');
+        document.write('<script src="/' + appConfig.root + '/shopon/service/vendor/vendor-api.js"><\/script>');
+        document.write('<script src="/' + appConfig.root + '/login/service/store-api.js"><\/script>');
+        document.write('<script src="/' + appConfig.root + '/login/service/user-permission-api.js"><\/script>');
+        document.write('<script src="/' + appConfig.root + '/shopon/service/report/stock-report-api.js"><\/script>');
+        document.write('<script src="/' + appConfig.root + '/shopon/service/stock-api.js"><\/script>');
+        document.write('<script src="/' + appConfig.root + '/shopon/service/product/main-product-type-api.js"><\/script>');
+		document.write('<script src="/' + appConfig.root + '/shopon/service/stock-api.js"><\/script>');
+    </script>
+
+    <!--<script src="service/member-service.js"></script>
+        <script src="service/payment-service.js"></script>
+        <script src="service/product/item-service.js"></script>
+    -->
+
+
+</head>
+
+
+<body control="page.stockReport" controlId="stockReport">
+    <div control="stockReport.masterPage" controlId="stockReportMaster"></div>
+    <div>
+        <div control="stockReport.messagePanel" controlid="msgPanel" class="message-panel" style="display:none"></div>
+    </div>
+    <div class="container-fluid" style="margin-top:40px;">
+        <div class="row">
+            <div class="col-xs-12 report-header">   
+                <span class="report-title">Stock Report</span>
+                
+                <input rlabel="Preview" value="Preview" control="stockReport.primaryWriteButton" controlid="btnGenerate" event="click:btnGenerate_click"  />
+                <input rlabel="Export" value="Export" control="stockReport.primaryWriteButton" controlid="btnReport" event="click:btnReport_click" />
+                <select control="stockReport.dropDownList" controlid="ddlViewMode">
+                    <option>Standard</option>
+                    <option>PurchaseSalesWise</option>
+                </select>
+                <!--<input type="button" rlabel="Print" value="Print" control="stockReport.primaryWriteButton" controlid="btnPrintStockReport" event="click:btnPrintStockReport_click" style="margin-right:15px;display:none;">--> 
+            </div>
+            <div class="filter-panel">
+                <h4 class="col-xs-12">Filter Panel</h4>
+                <div class="col-xs-3" control="stockReport.htmlControl" controlid="pnlStartDate">
+                    <span class="label" rlabel="Start Date">From</span>
+                    <input type="text" control="stockReport.dateSelector" controlid="txtStartDate" />
+                </div>
+                <div class="col-xs-3" control="stockReport.htmlControl" controlid="pnlEndDate">
+                    <span class="label" rlabel="End Date">To</span>
+                    <input type="text" control="stockReport.dateSelector" controlid="txtEndDate" />
+                </div>
+                <div class="col-xs-3">
+                    <span class="label" rlabel="Item">Item</span>
+                    <input type="text"  control="stockReport.autoCompleteList" controlid="ddlItem"/>
+                    <!--<select control="stockReport.autoCompleteList" controlid="ddlItem"></select>-->
+                </div>
+                <div class="col-xs-3">
+                    <span class="label" rlabel="Supplier">Supplier </span>
+                    <select control="stockReport.dropDownList" controlid="ddldefsupplier"></select>
+                </div>
+                <div class="col-xs-3">
+                    <span class="label" rlabel="Main Product Type">Main Product Type</span>
+                    <select control="stockReport.dropDownList" controlid="ddlMainProductType"></select>
+                </div>
+                <div class="col-xs-3">
+                    <span class="label" rlabel="Store">Store</span>
+                    <select control="stockReport.dropDownList" controlid="ddlStore"> </select>
+                </div>
+
+                <div class="col-xs-3" control="stockReport.htmlControl" controlid="pnlLanguage">
+                    <span class="label" rlabel="Language">Language </span>
+                    <select control="stockReport.dropDownList" controlid="ddlLanguage"></select>
+                </div>
+                <div class="col-xs-3" control="stockReport.htmlControl" controlid="pnlStock">
+                    <span class="label" rlabel="Stock">Stock </span>
+                    <select control="stockReport.dropDownList" controlid="ddlStock">
+                        <option>All</option>
+                        <option>Less Than Reorder Level</option>
+                        <option>Less Than Zero Qty</option>
+                        <option>Greater Than Reorder Level</option>
+                        <option>Greater Than Zero Qty</option>
+                    </select>
+                </div>
+                
+                <div class="col-xs-3" control="stockReport.htmlControl" controlid="pnlExpiry" style="display:none;">
+                    <span class="label" rlabel="Expiry">Expiry </span>
+                    <select control="stockReport.dropDownList" controlid="ddlexpiryview">
+                        <option>All</option>
+                        <option>Non Expiry Items</option>
+                        <option>Expiry Items</option>
+                        <option value="ExpiryAlertItems">Expiry Alert Items</option>
+                    </select>
+                </div>
+
+                <!--<div control="stockReport.htmlControl" controlid="pnlPurchaseSalesStock">
+                    
+                </div>-->
+
+            </div>
+            <div class="col-xs-12 summary-panel" style="" control="stockReport.htmlControl" controlid="pnlSummary">
+                <h2 class="col-xs-12">Summary Panel</h2>
+                <div class="col-xs-6" style="padding:0px;">
+                    <div class="col-xs-6">
+                        <h5 class="col-xs-12" style="padding:0px;">Opening / Closing Stock Summary</h5>
+                        <span class="label" rlabel="Opeining Stock">Opeining Stock</span>
+                        <input control="stockReport.labelValue" controlid="lblOpeningStock" />
+                        <span class="label" rlabel="Closing Stock">Closing Stock</span>
+                        <input control="stockReport.labelValue" controlid="lblTotalStock" />
+                    </div>
+                    <div class="col-xs-6">
+                        <h5 class="col-xs-12">&nbsp;</h5>
+                        <span class="label" rlabel="Opening Stock Amount">Opening Stock Amount</span>
+                        <input control="stockReport.labelValue" controlid="lblOpeningStockAmount" />
+                        <span class="label" rlabel="Closing Stock Amount">Closing Stock Amount</span>
+                        <input control="stockReport.labelValue" controlid="lblTotalStockAmount" />
+                    </div>
+                </div>
+                <div class="col-xs-6" style="padding:0px;">
+                    <div class="col-xs-6">
+                        <h5 class="col-xs-12" style="padding:0px;">Purchased / Current Stock Summary</h5>
+                        <span class="label" rlabel="Stock Purchased">Stock Purchased</span>
+                        <input control="stockReport.labelValue" controlid="lblPurchaseStock" />
+                        <span class="label" rlabel="Current Stock">Current Stock</span>
+                        <input control="stockReport.labelValue" controlid="lblCurrentStock" />
+                    </div>
+                    <div class="col-xs-6">
+                        <h5 class="col-xs-12">&nbsp;</h5>
+                        <span class="label" rlabel="Purchased Stock Amount">Purchased Stock Amount</span>
+                        <input control="stockReport.labelValue" controlid="lblPurchaseStockAmount" />
+                        <span class="label" rlabel="Current Stock Amount">Current Stock Amount</span>
+                        <input control="stockReport.labelValue" controlid="lblCurrentStockAmount" />
+                    </div>
+                </div>
+            </div>
+            <!--<div class="col-xs-12">
+                <div style="width:100%; overflow-x:auto; overflow-y:hidden;margin-top:10px">
+                    <div control="stockReport.grid" controlid="grdTransactions"></div>
+                </div>
+            </div>-->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" control="stockReport.htmlControl" controlid="pnlGridTransaction">
+                <div style="width:100%; overflow-x:auto; overflow-y:hidden;">
+                    <div control="stockReport.grid" controlId="grdTransactions"></div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="display:none;" control="stockReport.htmlControl" controlid="pnlEmptyGrid">
+                <div style="width:100%; overflow-x:auto; overflow-y:hidden;">
+                    <img src="../../../../ShopOn/ui/ui/images/no_result_image.png" style="padding-left:35%;padding-bottom:50px;height:200px;" />
+                </div>
+            </div>
+            <div controlId="pnlPrintingPopup" control="stockReport.popup" style="display:none">
+                <div class="row col-sm-12">
+                    &nbsp;
+                </div>
+                <div class="row col-sm-12">
+                    <span class="label col-sm-4" rlabel="Export Type">Export Type</span>
+                    <select style="margin-left:15px;" class="col-sm-4" control="stockReport.dropDownList" controlid="ddlExportType">
+                        <option>PDF</option>
+                        <option>EXCEL</option>
+                        <option>WORD</option>
+                        <option>PPT</option>
+                        <option>CSV</option>
+                        <option>HTML</option>
+                    </select>
+                    <input class="col-xs-12 col-lg-2" style="float:right;" value="Go" rlabel="Go" controlId="btnPrintJasperBill" control="stockReport.primaryWriteButton" event="click:btnPrintJasperBill_click" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div controlId="pnlItemDetails" control="stockReport.popup" style="display:none">
+        <div class="col-sm-12">
+            <div style="width:100%; overflow-x:auto; overflow-y:hidden;margin-top:10px">
+                <div controlId="grdItemDetails" control="stockReport.grid">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
